@@ -1,4 +1,4 @@
-from flask import Flask,request,render_template
+from flask import Flask, render_template
 
 
 app=Flask(__name__)
@@ -7,7 +7,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html') 
+    return render_template('home.html', title="home") 
 
 @app.route('/predict',methods=['GET','POST'])
 def predict_datapoint():

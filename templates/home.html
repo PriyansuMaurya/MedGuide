@@ -1,10 +1,15 @@
 <html>
 
-<body>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body class="m-10">
 
     <h2>
-        <h1>Welcome to the home page</h1>
-        <a href="/predict">About</a>
+        <h1 class="text-slate-950 text-3xl">Welcome to the home page</h1>
+        <p class="underline decoration-solid underline-offset-1	"><a href="/predict">About</a></p>
     </h2>
 
     <body>
