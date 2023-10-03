@@ -1,0 +1,42 @@
+{
+  "name": "MedGuide DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/node-asdf:0": {}
+  },
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "pip3 install -r requirements.txt",
+  "postCreateCommand": "",
+  "postAttachCommand": {
+    "server": "python3 app.py",
+    "tailwindcss": "cd static && npm i  && npx tailwindcss -i ./src/style.css -o ./main.css --watch"
+  },
+  "portsAttributes": {
+    "5000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "templates/home.html"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-rename-tag",
+        "wholroyd.jinja"
+      ]
+    }
+  },
+  "forwardPorts": [
+    5000
+  ],
+  "remoteUser": "vscode"
+}
