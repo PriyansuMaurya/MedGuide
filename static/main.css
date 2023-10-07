@@ -542,19 +542,9 @@ video {
   margin: 2.5rem;
 }
 
-.bg-slate-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-slate-100 {
-  --tw-text-opacity: 1;
-  color: rgb(241 245 249 / var(--tw-text-opacity));
 }
 
 .text-green-400 {
@@ -573,10 +563,6 @@ video {
 
 .decoration-solid {
   text-decoration-style: solid;
-}
-
-.decoration-double {
-  text-decoration-style: double;
 }
 
 .decoration-dotted {
