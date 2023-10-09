@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8" />
+  <title>FAQs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+    <style>
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+        }
+
+        .answer.active {
+            display: block;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            width: 0.25em;
+          }
+        
+          .scrollbar-hide::-webkit-scrollbar-thumb {
+            background-color: transparent;
+          }
+        
+          .scrollbar-hide {
+            scrollbar-width: thin;
+          }
+    </style>
+</head>
+<body class="bg-[#000] scrollbar-hide">
+    <div class="flex items-center mt-[30px] ml-[28px]">
+        <img src="{{ url_for('static', filename='assets/appLogo.png') }}" alt="+" class="rotate-[19.184deg]">
+        <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
+        <p class="ml-[1141px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
+        <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+    </div>
+
+    <div class="flex items-center justify-evenly">
+      <img src="{{ url_for('static', filename='assets/faqsImg.png') }}" alt="-" class="w-[442px] h-[287px]">
+      <div>
+        <h1 class="text-[#FFF]">Frequently Asked Questions</h1>
+
+        <div class="text-[#FFF]" id="faqAccordion">
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const faqData = [
+            {
+                question: "Question 1",
+                answer: "Answer 1"
+            },
+            {
+                question: "Question 2",
+                answer: "Answer 2"
+            },
+            {
+                question: "Question 3",
+                answer: "Answer 3"
+            },
+            {
+                question: "Question 4",
+                answer: "Answer 4"
+            },
+            {
+                question: "Question 5",
+                answer: "Answer 5"
+            },
+            {
+                question: "Question 6",
+                answer: "Answer 6"
+            },
+            {
+                question: "Question 7",
+                answer: "Answer 7"
+            }
+        ];
+
+        const faqAccordion = document.getElementById('faqAccordion');
+
+        faqData.forEach((item, index) => {
+            const faqItem = document.createElement('div');
+            faqItem.classList.add('faq-item');
+
+            const question = document.createElement('div');
+            question.classList.add('question');
+            question.textContent = item.question;
+
+            const answer = document.createElement('div');
+            answer.classList.add('answer');
+            answer.textContent = item.answer;
+
+            question.addEventListener('click', () => {
+                answer.classList.toggle('active');
+            });
+
+            faqItem.appendChild(question);
+            faqItem.appendChild(answer);
+
+            faqAccordion.appendChild(faqItem);
+        });
+    </script>
+
+</body>
+</html>
