@@ -31,15 +31,21 @@
   </div>
 
   <div class="mt-[93px] flex items-center justify-center">
-    <div class="w-[365.33px] h-[58px] flex items-center justify-center rounded-l-[50px] border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
-        <p class="text-[#222327] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
-    </div>
-    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center">
-        <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
-    </div>  
-    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-r-[50px] border-l border-l-[#FFF]">
-        <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
-    </div>  
+    <a href="/tellsymptoms">
+      <div class="w-[365.33px] h-[58px] flex items-center justify-center rounded-l-[50px] cursor-pointer border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+          <p class="text-[#222327] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
+      </div>
+    </a>
+    <a href="/possible-disease">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer" >
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+      </div>  
+    </a>
+    <a href="/suggestions">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF]">
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+      </div>  
+    </a>
   </div>
 
   <form action="/possible-disease" method="get">
@@ -58,15 +64,14 @@
             <div class="inline-flex items-center">
               <select class="w-[213px] h-[41px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
                   <option value="Please Select" selected>Please Select</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option value="under 18">under 18</option>
+                  <option value="18 -50">18 - 50</option>
+                  <option value="above 50">above 50</option>
               </select>
               <select class="w-[213px] h-[41px] ml-[78px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
                   <option value="Please Select" selected>Please Select</option>
-                  <option value="saab">Saab</option>
-                  <option value="mercedes">Mercedes</option>
-                  <option value="audi">Audi</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
               </select>
               <input type="text" name="symptom" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
           </div>

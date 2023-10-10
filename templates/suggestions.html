@@ -31,15 +31,21 @@
   </div>
 
   <div class="mt-[93px] flex items-center justify-center">
-    <div class="w-[365.33px] h-[58px]  bg-[#17191C] flex items-center justify-center rounded-l-[50px] ">
-        <p class="text-[#FFF]  font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
-    </div>
-    <div class="w-[365.33px] h-[58px]  bg-[#17191C] flex items-center justify-center">
-        <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
-    </div>  
-    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B] rounded-r-[50px] border-l border-l-[#FFF]">
-        <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
-    </div>  
+    <a href="/tellsymptoms">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-l-[50px] cursor-pointer">
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
+      </div>
+    </a>
+    <a href="/possible-disease">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer" >
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+      </div>  
+    </a>
+    <a href="/suggestions">
+      <div class="w-[365.33px] h-[58px]  flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF] border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+      </div>  
+    </a>
   </div>
 
   <div class="flex items-center justify-center mt-[24px]">
@@ -69,7 +75,7 @@
   </div>
 
   <div class="flex items-center justify-center mt-[30px]">
-    <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]">
+    <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]" id="backBtn" >
       <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Back</p>
     </Button>
   </div>
@@ -88,4 +94,10 @@
   </div>
 
 </body>
+
+<script>
+  document.getElementById('backBtn').addEventListener('click', function() {
+      window.location.href = 'http://127.0.0.1:5000/possible-disease'; // Replace with the desired URL
+  });
+</script>
 </html>
