@@ -563,6 +563,10 @@ video {
   margin-left: 54px;
 }
 
+.mt-\[71px\]{
+  margin-top: 71px;
+}
+
 .ml-\[78px\] {
   margin-left: 78px;
 }
@@ -574,8 +578,13 @@ video {
 .ml-\[132px\] {
   margin-left: 132px;
 }
+
 .ml-\[138px\] {
   margin-left: 138px;
+}
+
+.mt-\[400px\] {
+  margin-top: 400px;
 }
 
 .ml-\[33px\] {
@@ -721,6 +730,14 @@ video {
   display: inline-flex;
 }
 
+.object-contain {
+  object-fit: contain;
+}
+
+.gap-x-\[37px\] {
+  column-gap: 37px;
+}
+
 .h-\[48px\] {
   height: 48px;
 }
@@ -733,12 +750,20 @@ video {
   height: 155px;
 }
 
+.h-\[287px\] {
+  height: 287px;
+}
+
 .w-\[21px\] {
   width: 21px;
 }
 
 .w-\[259px\] {
   width: 259px;
+}
+
+.w-\[442px\] {
+  width: 442px;
 }
 
 .w-\[27px\] {
@@ -819,8 +844,16 @@ video {
   align-items: center;
 }
 
+.items-end {
+  align-items:flex-end;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .cursor-pointer {
@@ -1048,6 +1081,10 @@ video {
   font-family: 'Inter';
 }
 
+.font-\[\'Montserrat\'\] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1069,8 +1106,8 @@ video {
   font-size: 20px;
 }
 
-.text-\[20px\] {
-  font-size: 20px;
+.text-\[27px\] {
+  font-size: 27px;
 }
 
 .text-\[18px\] {
@@ -1083,6 +1120,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .leading-normal {
@@ -1113,6 +1154,10 @@ video {
   color: rgb(196 199 197 / var(--tw-text-opacity));
 }
 
+.text-\[\#DEDEDE\] {
+  --tw-text-opacity: 1;
+  color: rgb(222 222 222 / var(--tw-text-opacity));
+}
 .text-\[\#FB0202\] {
   --tw-text-opacity: 1;
   color: rgb(251 2 2 / var(--tw-text-opacity));

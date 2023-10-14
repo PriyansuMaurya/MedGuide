@@ -48,7 +48,7 @@
     </a>
   </div>
 
-  <form action="/possible-disease" method="get" onsubmit="return validateForm()">
+  <form action="/possible-disease" method="post" onsubmit="return validateForm()">
 
       <div class="flex items-center justify-center mt-[24px]">
         <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
@@ -73,7 +73,7 @@
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
               </select>
-              <input type="text" name="symptom" id="symptomInput" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
+              <input type="text" name="symptom" id="symptomInput" autocomplete="off" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
           </div>
           </div>
     
