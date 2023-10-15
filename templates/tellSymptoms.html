@@ -22,12 +22,14 @@
   </style>
 
 </head>
-<body class="bg-[#000] scrollbar-hide">
+<body class="bg-[#000] scrollbar-hide h-screen">
   <div class="flex items-center mt-[30px] ml-[28px]">
-      <img src="{{ url_for('static', filename='assets/appLogo.png') }}" alt="+" class="rotate-[19.184deg]">
+      <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
       <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
-      <p class="ml-[1141px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
-      <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+      <div class="flex items-center justify-center gap-x-[20px] absolute right-[30px]" >
+        <p class="mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
+        <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+      </div>
   </div>
 
   <div class="mt-[93px] flex items-center justify-center">
@@ -53,27 +55,30 @@
       <div class="flex items-center justify-center mt-[24px]">
         <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
           <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">Symptom details</p>
-    
-          <div class="inline-flex items-center mt-[47px]">
-            <p class="ml-[40px] text-[#C4C7C5] font-['Inter'] text-[20px] font-normal leading-normal">Age of the patient *</p>
-            <p class="ml-[138px] text-[#C4C7C5] font-['Inter'] text-[20px] font-normal leading-normal">Patient’s sex at birth</p>
-            <p class="ml-[132px] text-[#C4C7C5] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal clinical features</p>
-          </div>
-    
-          <div class="ml-[40px] mt-[23px]">
+          
+          <div class="ml-[40px] mt-[47px]">
             <div class="inline-flex items-center">
-              <select id="ageSelect" name="age" class="w-[213px] h-[41px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+              <div>
+                <p class=" text-[#C4C7C5] ml-[6px] font-['Inter'] text-[20px] font-normal leading-normal">Age of the patient *</p>
+                <select id="ageSelect" name="age" class="w-[213px] h-[41px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
                   <option value="Please Select" selected>Please Select</option>
                   <option value="under 18">under 18</option>
                   <option value="18 -50">18 - 50</option>
                   <option value="above 50">above 50</option>
-              </select>
-              <select id="sexSelect" name="sex" class="w-[213px] h-[41px] ml-[78px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
-                  <option value="Please Select" selected>Please Select</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-              </select>
-              <input type="text" name="symptom" id="symptomInput" autocomplete="off" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
+                </select>
+              </div>
+              <div>
+                <p class=" text-[#C4C7C5] ml-[85px] font-['Inter'] text-[20px] font-normal leading-normal">Patient’s sex at birth</p>
+                <select id="sexSelect" name="sex" class="w-[213px] h-[41px] ml-[78px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+                    <option value="Please Select" selected>Please Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+              </div>
+              <div>
+                <p class=" text-[#C4C7C5] ml-[90px] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal clinical features</p>
+                <input type="text" name="symptom" id="symptomInput" autocomplete="off" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
+              </div>
           </div>
           </div>
     
@@ -96,7 +101,7 @@
     <p class="text-[#FFF] font-['Inter'] text-[14px] font-normal leading-normal"> <span class="text-[#FB0202] font-['Inter'] text-[16px] font-medium leading-normal">Warning: </span>          MedGuide Symptom Checker (‘MedGuide’) and any content accessed through MedGuide is for informational purposes only, and...</p>
   </div>
 
-  <div class="mt-[29px] py-[10px] border-t-[1px] border-t-[#FFF] flex items-center">
+  <div class="mt-[29px] py-[10px] w-full border-t-[1px] border-t-[#FFF] flex items-center">
     <p class="ml-[42px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Privacy Policy</p>
     <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Terms & Conditions</p>
     <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">@MedGuide 2023</p>

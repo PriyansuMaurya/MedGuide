@@ -39,12 +39,14 @@
           }
     </style>
 </head>
-<body class="bg-[#000] scrollbar-hide">
+<body class="bg-[#000] scrollbar-hide h-screen">
     <div class="flex items-center mt-[30px] ml-[28px]">
-        <img src="{{ url_for('static', filename='assets/appLogo.png') }}" alt="+" class="rotate-[19.184deg]">
+        <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
         <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
-        <p class="ml-[1141px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
-        <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+        <div class="flex items-center justify-center gap-x-[20px] absolute right-[30px]" >
+            <p class="mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
+            <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+          </div>
     </div>
 
     <div class="flex justify-center">
@@ -65,7 +67,7 @@
         <p class="text-[#FFF] font-['Inter'] text-[14px] font-normal leading-normal"> <span class="text-[#FB0202] font-['Inter'] text-[16px] font-medium leading-normal">Warning: </span>          MedGuide Symptom Checker (‘MedGuide’) and any content accessed through MedGuide is for informational purposes only, and...</p>
       </div>
     
-      <div class="mt-[29px] py-[10px] border-t-[1px] border-t-[#FFF] flex items-center">
+      <div class="mt-[29px] py-[10px] w-full border-t-[1px] border-t-[#FFF] flex items-center">
         <p class="ml-[42px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Privacy Policy</p>
         <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Terms & Conditions</p>
         <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">@MedGuide 2023</p>
