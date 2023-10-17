@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="UTF-8" />
+  <title>tell us about your symptoms</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      width: 0.25em;
+    }
+  
+    .scrollbar-hide::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+  
+    .scrollbar-hide {
+      scrollbar-width: thin;
+    }
+  </style>
+
+</head>
+<body class="bg-[#000] scrollbar-hide h-screen">
+  <div class="flex items-center mt-[30px] ml-[28px]">
+      <a href="/" >
+          <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
+      </a>
+      <a href="/" >
+          <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
+      </a>
+      <div class="flex items-center justify-center gap-x-[20px] absolute right-[30px]" >
+        <p class="mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
+        <a href="/faqs">
+            <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+        </a>
+      </div>
+  </div>
+
+  <div class="mt-[93px] flex items-center justify-center">
+    <a href="/">
+      <div class="w-[365.33px] h-[58px] flex items-center justify-center rounded-l-[50px] cursor-pointer border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+          <p class="text-[#222327] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
+      </div>
+    </a>
+    <a href="/possible-disease">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer" >
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+      </div>  
+    </a>
+    <a href="/suggestions">
+      <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF]">
+          <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+      </div>  
+    </a>
+  </div>
+
+  <form action="/possible-disease" method="post" onsubmit="return validateForm()">
+
+      <div class="flex items-center justify-center mt-[24px]">
+        <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
+          <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">Symptom details</p>
+          
+          <div class="ml-[40px] mt-[47px]">
+            <div class="inline-flex items-center">
+              <div>
+                <p class=" text-[#C4C7C5] ml-[6px] font-['Inter'] text-[20px] font-normal leading-normal">Age of the patient *</p>
+                <select id="ageSelect" name="age" class="w-[213px] h-[41px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+                  <option value="Please Select" selected>Please Select</option>
+                  <option value="under 18">under 18</option>
+                  <option value="18 -50">18 - 50</option>
+                  <option value="above 50">above 50</option>
+                </select>
+              </div>
+              <div>
+                <p class=" text-[#C4C7C5] ml-[85px] font-['Inter'] text-[20px] font-normal leading-normal">Select your Gender</p>
+                <select id="sexSelect" name="sex" class="w-[213px] h-[41px] ml-[78px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+                    <option value="Please Select" selected>Please Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+              </div>
+              <div>
+                <p class=" text-[#C4C7C5] ml-[90px] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal clinical features</p>
+                <input type="text" name="symptom" id="symptomInput" autocomplete="off" class="w-[364px] h-[41px] ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;" placeholder="Enter your symptom e.g. chest pain ">
+              </div>
+          </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    
+      <div class="flex items-center justify-center mt-[30px]">
+        <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]">
+          <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Clear</p>
+        </Button>
+        <Button type="submit" class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]">
+          <p class="font-['Inter'] text-[20px] font-medium leading-normal">Next</p>
+        </Button>
+      </div>
+  </form>
+
+  <div class="flex items-center justify-center mt-[29px]">
+    <img src="{{ url_for('static', filename='assets/warningIcon.png') }}" alt="1" class="w-[21px] h-[17px]">
+    <p class="text-[#FFF] font-['Inter'] text-[14px] font-normal leading-normal"> <span class="text-[#FB0202] font-['Inter'] text-[16px] font-medium leading-normal">Warning: </span>          MedGuide Symptom Checker (‘MedGuide’) and any content accessed through MedGuide is for informational purposes only, and...</p>
+  </div>
+
+  <div class="mt-[29px] py-[10px] w-full border-t-[1px] border-t-[#FFF] flex items-center">
+    <p class="ml-[42px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Privacy Policy</p>
+    <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Terms & Conditions</p>
+    <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">@MedGuide 2023</p>
+    <a href="https://github.com/PriyansuMaurya/MedGuide" target="_blank">
+      <img class="ml-[34rem]" src="{{ url_for('static', filename='assets/githubLogo.png') }}" alt="github" >
+    </a>
+  </div>
+
+</body>
+
+<script>
+  function validateForm() {
+    var ageSelect = document.getElementById("ageSelect");
+    var sexSelect = document.getElementById("sexSelect");
+    var symptomInput = document.getElementById("symptomInput");
+
+    if (ageSelect.value == "Please Select" || sexSelect.value == "Please Select" || symptomInput.value == "") {
+      alert("Please fill in all fields.");
+      return false;
+    }
+    return true;
+  }
+</script>
+</html>

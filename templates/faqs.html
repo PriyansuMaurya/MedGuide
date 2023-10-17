@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>FAQs</title>
-   <link rel="stylesheet" href="{{ url_for('static', filename='build/main.css') }}">  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
     <style>
         .faq-item {
@@ -21,7 +22,10 @@
 
         .answer.active {
             display: block;
+            width: 484px;
+            height: 62px;
         }
+
         .scrollbar-hide::-webkit-scrollbar {
             width: 0.25em;
           }
@@ -35,80 +39,104 @@
           }
     </style>
 </head>
-<body class="bg-[#000] scrollbar-hide">
+<body class="bg-[#000] scrollbar-hide h-screen">
     <div class="flex items-center mt-[30px] ml-[28px]">
-        <img src="{{ url_for('static', filename='assets/appLogo.png') }}" alt="+" class="rotate-[19.184deg]">
-        <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
-        <p class="ml-[1141px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
-        <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+        <a href="/" >
+            <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
+        </a>
+        <a href="/" >
+            <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
+        </a>
+        <div class="flex items-center justify-center gap-x-[20px] absolute right-[30px]" >
+            <p class="mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
+            <a href="/faqs">
+                <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+            </a>
+          </div>
     </div>
 
-    <div class="flex items-center justify-evenly">
-      <img src="{{ url_for('static', filename='assets/faqsImg.png') }}" alt="-" class="w-[442px] h-[287px]">
-      <div>
-        <h1 class="text-[#FFF]">Frequently Asked Questions</h1>
-
-        <div class="text-[#FFF]" id="faqAccordion">
+    <div class="flex justify-center">
+        <div class="mt-[71px] inline-flex">
+          <img src="{{ url_for('static', filename='assets/faqsImg.png') }}" alt="-" class="object-contain">
+          <div class="ml-[37px]">
+            <h1 class="text-[#DEDEDE] font-['Montserrat'] text-[27px] font-semibold leading-normal">Frequently Asked Questions</h1>
+            <p class="w-[512]px h-[3px] mt-[15px] flex-shrink-0 bg-[#D7DEF0]"></p>
+            <div class="text-[#FFF]" id="faqAccordion" style="position: absolute, z-index: -1;" >
+            </div>
+          </div>
         </div>
-      </div>
     </div>
 
-    <script>
-        const faqData = [
-            {
-                question: "Question 1",
-                answer: "Answer 1"
-            },
-            {
-                question: "Question 2",
-                answer: "Answer 2"
-            },
-            {
-                question: "Question 3",
-                answer: "Answer 3"
-            },
-            {
-                question: "Question 4",
-                answer: "Answer 4"
-            },
-            {
-                question: "Question 5",
-                answer: "Answer 5"
-            },
-            {
-                question: "Question 6",
-                answer: "Answer 6"
-            },
-            {
-                question: "Question 7",
-                answer: "Answer 7"
-            }
-        ];
 
-        const faqAccordion = document.getElementById('faqAccordion');
-
-        faqData.forEach((item, index) => {
-            const faqItem = document.createElement('div');
-            faqItem.classList.add('faq-item');
-
-            const question = document.createElement('div');
-            question.classList.add('question');
-            question.textContent = item.question;
-
-            const answer = document.createElement('div');
-            answer.classList.add('answer');
-            answer.textContent = item.answer;
-
-            question.addEventListener('click', () => {
-                answer.classList.toggle('active');
-            });
-
-            faqItem.appendChild(question);
-            faqItem.appendChild(answer);
-
-            faqAccordion.appendChild(faqItem);
-        });
-    </script>
-
+    <div class="flex items-center justify-center mt-[29px] ">
+        <img src="{{ url_for('static', filename='assets/warningIcon.png') }}" alt="1" class="w-[21px] h-[17px]">
+        <p class="text-[#FFF] font-['Inter'] text-[14px] font-normal leading-normal"> <span class="text-[#FB0202] font-['Inter'] text-[16px] font-medium leading-normal">Warning: </span>          MedGuide Symptom Checker (‘MedGuide’) and any content accessed through MedGuide is for informational purposes only, and...</p>
+      </div>
+    
+      <div class="mt-[29px] py-[10px] w-full border-t-[1px] border-t-[#FFF] flex items-center">
+        <p class="ml-[42px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Privacy Policy</p>
+        <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Terms & Conditions</p>
+        <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">@MedGuide 2023</p>
+        <a href="https://github.com/PriyansuMaurya/MedGuide" target="_blank">
+            <img class="ml-[34rem]" src="{{ url_for('static', filename='assets/githubLogo.png') }}" alt="github" >
+        </a>
+      </div>
 </body>
+<script>
+    const faqData = [
+        {
+            question: "This is sample Question 1",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 2",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 3",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 4",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 5",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 6",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        },
+        {
+            question: "This is sample Question 7",
+            answer: "Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id ullamcorper venenatis. "
+        }
+    ];
+
+    const faqAccordion = document.getElementById('faqAccordion');
+
+    faqData.forEach((item, index) => {
+        const faqItem = document.createElement('div');
+        faqItem.classList.add('faq-item');
+
+        const question = document.createElement('div');
+        question.classList.add('question');
+        question.textContent = item.question;
+
+        const answer = document.createElement('div');
+        answer.classList.add('answer');
+        answer.style.width
+        answer.textContent = item.answer;
+
+        question.addEventListener('click', () => {
+            answer.classList.toggle('active');
+        });
+
+        faqItem.appendChild(question);
+        faqItem.appendChild(answer);
+
+        faqAccordion.appendChild(faqItem);
+    });
+</script>
 </html>
