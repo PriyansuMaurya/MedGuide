@@ -24,16 +24,22 @@
 </head>
 <body class="bg-[#000] scrollbar-hide h-screen">
   <div class="flex items-center mt-[30px] ml-[28px]">
-      <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
-      <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
+      <a href="/" >
+          <img src="{{ url_for('static', filename='assets/web_Logo.png') }}" alt="+" class="rotate-[19.184deg]">
+      </a>
+      <a href="/" >
+          <p class="font-['Inter'] text-[24px] font-normal leading-normal text-[#FFF] bg-clip-text" >MedGuide</p>
+      </a>
       <div class="flex items-center justify-center gap-x-[20px] absolute right-[30px]" >
         <p class="mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">About Us</p>
-        <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+        <a href="/faqs">
+            <p class="ml-[30px] mt-[6px] text-[#BAC] font-['Inter'] text-[20px] font-medium leading-normal">FAQs</p>
+        </a>
       </div>
   </div>
 
   <div class="mt-[93px] flex items-center justify-center">
-    <a href="/tellsymptoms">
+    <a href="/">
       <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-l-[50px] cursor-pointer ">
           <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms</p>
       </div>
@@ -92,18 +98,19 @@
     <p class="ml-[42px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Privacy Policy</p>
     <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">Terms & Conditions</p>
     <p class="ml-[214px] text-[#FFF] font-['Inter'] text-[16px] font-normal leading-normal">@MedGuide 2023</p>
-    <img class="ml-[34rem]" src="{{ url_for('static', filename='assets/githubLogo.png') }}" alt="github" >
-    <img class="ml-[30px]" src="{{ url_for('static', filename='assets/twitterLogo.png') }}" alt="twitter" >
+    <a href="https://github.com/PriyansuMaurya/MedGuide" target="_blank">
+      <img class="ml-[34rem]" src="{{ url_for('static', filename='assets/githubLogo.png') }}" alt="github" >
+    </a>
   </div>
 
 </body>
 
 <script>
   document.getElementById('nextBtn').addEventListener('click', function() {
-      window.location.href = 'http://127.0.0.1:5000/suggestions'; // Replace with the desired URL
+      window.location.href = 'http://127.0.0.1:5000/suggestions'; 
   });
   document.getElementById('backBtn').addEventListener('click', function() {
-      window.location.href = 'http://127.0.0.1:5000/tellsymptoms'; // Replace with the desired URL
+      window.location.href = 'http://127.0.0.1:5000/'; 
   });
 </script>
 </html>

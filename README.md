@@ -31,7 +31,7 @@ To run this project on your local environment, follow these steps:
 6. Build the CSS using Tailwind CSS:
 
    ```bash
-   npx tailwindcss -i ./src/style.css -o ./main.css --watch
+   npx tailwindcss -i ./src/style.css -o ./build/main.css --watch
    ```
 
 

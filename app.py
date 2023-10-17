@@ -7,22 +7,12 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html', title="home") 
-
-@app.route('/predict',methods=['GET','POST'])
-def predict_datapoint():
-
-        return render_template('predict.html',results="Good")
-    
-@app.route("/tellsymptoms",methods=['GET', 'POST'])
-def tellsymptoms_datappoint():
-
-        return render_template('tellSymptoms.html', results="Good")
+    return render_template('tell_symptoms.html', title="Symptoms") 
 
 @app.route("/possible-disease", methods=['GET', 'POST'])
 def possibledisease_datappoint():
       
-        return render_template('possibleDisease.html', results="Good")
+        return render_template('possible_disease.html', results="Good")
 
 @app.route("/suggestions", methods=['GET', 'POST'])
 def suggestions_datappoint():
