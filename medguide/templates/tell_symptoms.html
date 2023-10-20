@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block div %}
+
+<div class="mt-[93px] flex items-center justify-center">
+  <div
+    class="w-[365.33px] h-[58px] flex items-center justify-center rounded-l-[50px] cursor-pointer border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+    <p class="text-[#222327] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your
+      symptoms</p>
+  </div>
+  <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer">
+    <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+  </div>
+  <div
+    class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF]">
+    <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+  </div>
+</div>
+
+<form action="/" method="POST" onsubmit="return validateForm()">
+
+  <div class="flex items-center justify-center mt-[24px]">
+    <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
+      <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">Symptom details
+      </p>
+
+      <div class="ml-[40px] mt-[47px]">
+        <div class="inline-flex items-center">
+          <div>
+            <p class=" text-[#C4C7C5] ml-[6px] font-['Inter'] text-[20px] font-normal leading-normal">Age of the patient
+              *</p>
+            <select id="ageSelect" name="age"
+              class="w-[213px] h-[41px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]"
+              style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+              <option value="Please Select" selected>Please Select</option>
+              <option value="under 18">under 18</option>
+              <option value="18 -50">18 - 50</option>
+              <option value="above 50">above 50</option>
+            </select>
+          </div>
+          <div>
+            <p class=" text-[#C4C7C5] ml-[85px] font-['Inter'] text-[20px] font-normal leading-normal">Select your
+              Gender</p>
+            <select id="sexSelect" name="sex"
+              class="w-[213px] h-[41px] ml-[78px] pt-[11px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]"
+              style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+              <option value="Please Select" selected>Please Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div>
+            <p class=" text-[#C4C7C5] ml-[90px] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal
+              clinical features</p>
+            <select   
+            class="w-[364px] h-[41px] overflow-y-hidden ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]"
+            style="border: 1px solid #BDC1C6; background-color: #131314E6; height: auto"
+            id="symptomInput" 
+            autocomplete="off"
+            name="symptom"
+            multiple
+            >
+            {% for symptom in symptoms_list %}
+              <option value={{symptom}}>{{symptom}}</option>
+              {% endfor %}
+            </select>
+
+            <div class="">
+              <p id="selectedSymptoms" class="text-[#fff]" >
+    
+              <p/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="flex items-center justify-center mt-[30px]">
+    <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]">
+      <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Clear</p>
+    </Button>
+    <Button type="submit" class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]">
+      <p class="font-['Inter'] text-[20px] font-medium leading-normal">Next</p>
+    </Button>
+  </div>
+</form>
+
+<script>
+  document.getElementById('symptomInput').addEventListener('change', function() {
+    var selectedSymptomsDiv = document.getElementById('selectedSymptoms');
+    var selectedOptions = this.selectedOptions;
+
+    for (var i = 0; i < selectedOptions.length; i++) {
+        var symptom = selectedOptions[i].value;  
+
+        var badge = document.createElement('span');
+        badge.classList.add('badge'); 
+        badge.textContent = symptom;
+
+        selectedSymptomsDiv.appendChild(badge);
+    }
+});
+
+</script>
+{% endblock %}

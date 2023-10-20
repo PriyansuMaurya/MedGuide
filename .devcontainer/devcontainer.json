@@ -12,7 +12,7 @@
   "postCreateCommand": "",
   "postAttachCommand": {
     "server": "python3 app.py",
-    "tailwindcss": "cd static && npm i  && npx tailwindcss -i ./src/style.css -o ./build/main.css --watch"
+    "tailwindcss": "cd medguide/static/ && npm i  && npx tailwindcss -i ./src/style.css -o ./build/main.css --watch"
   },
   "portsAttributes": {
     "5000": {

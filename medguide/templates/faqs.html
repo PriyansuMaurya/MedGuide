@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block div %}
+<div class="flex justify-center">
+    <div class="mt-[71px] inline-flex">
+        <img src="{{ url_for('static', filename='assets/faqsImg.png') }}" alt="-" class="object-contain">
+        <div class="ml-[37px]">
+            <h1 class="text-[#DEDEDE] font-['Montserrat'] text-[27px] font-semibold leading-normal">Frequently Asked
+                Questions</h1>
+            <p class="w-[512]px h-[3px] mt-[15px] flex-shrink-0 bg-[#D7DEF0]"></p>
+            <div class="text-[#FFF]" id="faqAccordion" style="position: absolute">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
