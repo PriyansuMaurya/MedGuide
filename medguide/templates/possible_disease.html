@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block div %}
+<div class="mt-[93px] flex items-center justify-center">
+    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-l-[50px] cursor-pointer ">
+      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms
+      </p>
+    </div>
+    <div
+      class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+    </div>
+    <div
+      class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF]">
+      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+    </div>
+</div>
+
+<div class="flex items-center justify-center mt-[24px]">
+  <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
+    <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">Possible Diseases
+    </p>
+
+    <div class="mt-[31px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
+      <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">{{possible_disease}}</p>
+    </div>
+    <div class="mt-[5px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
+      <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">Viral
+        Meningoencephalitis</p>
+    </div>
+    <div class="mt-[5px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
+      <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">Dengue Fever
+      </p>
+    </div>
+    <div class="mt-[5px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
+      <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">Salmonella
+        Infections</p>
+    </div>
+    <div class="mt-[5px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
+      <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">CNS TB & TB
+        Meningitis</p>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="flex items-center justify-center mt-[30px]">
+  <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]" id="backBtn">
+    <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Back</p>
+  </Button>
+  <Button class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]" id="nextBtn">
+    <p class="font-['Inter'] text-[20px] font-medium leading-normal">Next</p>
+  </Button>
+</div>
+{% endblock %}

@@ -1,6 +1,0 @@
-<div class="container mt-5">
-    <h1 class="mb-4">Frequently Asked Questions</h1>
-
-    <div id="faqAccordion">
-    </div>
-</div>

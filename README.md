@@ -19,7 +19,7 @@ To run this project on your local environment, follow these steps:
 4. Change directory to the `static` folder:
 
    ```bash
-   cd static
+   cd medguide/static/
    ```
 
 5. Install npm packages:
