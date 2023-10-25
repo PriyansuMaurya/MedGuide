@@ -16,8 +16,9 @@ def index():
                 age = request.form.get('age')
                 sex = request.form.get('sex')
                 symptom = request.form.get('symptom')
-                 
 
+                
+                # print(f'Selected Symptom: {symptom}')
                 df = pd.read_csv('notebook/data/disease_with_132_features.csv')
                 df_drop_target = df.drop(['prognosis'],axis =1)
                 numerical_columns = np.array(df_drop_target.columns)
@@ -62,6 +63,7 @@ def index():
 
                 # return f"{diseases[index][10:]}"
                 return f"{symptom}"
+                # return ','.join(symptom)
                 # return render_template(
                 #         'possible_disease.html', 
                 #         title="Possible disease",
@@ -69,7 +71,7 @@ def index():
                 #         )
                 
 
-        return render_template('tell_symptoms.html', title="Possible disease", symptoms_list = symptoms)
+        return render_template('tell_symptoms.html', title="tell symptoms", symptoms_list = symptoms)
 
 
 def get_diseases():

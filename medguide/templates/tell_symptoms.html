@@ -51,27 +51,21 @@
               <option value="Female">Female</option>
             </select>
           </div>
-          <div>
+          <div >
             <p class=" text-[#C4C7C5] ml-[90px] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal
               clinical features</p>
-            <select   
-            class="w-[364px] h-[41px] overflow-y-hidden ml-[84px] pt-[11px] pl-[28px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]"
-            style="border: 1px solid #BDC1C6; background-color: #131314E6; height: auto"
-            id="symptomInput" 
-            autocomplete="off"
-            name="symptom"
-            multiple
-            >
-            {% for symptom in symptoms_list %}
-              <option value={{symptom}}>{{symptom}}</option>
-              {% endfor %}
-            </select>
+              
 
-            <div class="">
-              <p id="selectedSymptoms" class="text-[#fff]" >
-    
-              <p/>
+              <div class="relative inline-block ml-[90px] bg-[#131314E6] w-fit text-[#C4C7C5] " >
+                <div class=" py-2 px-4 text-[#C4C7C5] rounded-[29px] border border-[#BDC1C6] cursor-pointer" id="selectedOption">Enter your symptom e.g. chest pain </div>
+                <div class="absolute  overflow-y-scroll overflow-x-hidden h-[300px] w-[220px]  left-0 mt-2 py-2  bg-[#131314E6] border border-gray-300 shadow-lg hidden" id="dropdownOptions">
+                  {% for symptom in symptoms_list %}
+            <div class="block px-4 py-2 cursor-pointer w-full" data-value="{{ symptom }}">{{ symptom }}</div>
+        {% endfor %}
+                    
+                </div>
             </div>
+             <input type="hidden" name="symptom" id="selectedSymptom">
           </div>
         </div>
       </div>
@@ -91,20 +85,54 @@
 </form>
 
 <script>
-  document.getElementById('symptomInput').addEventListener('change', function() {
-    var selectedSymptomsDiv = document.getElementById('selectedSymptoms');
-    var selectedOptions = this.selectedOptions;
 
-    for (var i = 0; i < selectedOptions.length; i++) {
-        var symptom = selectedOptions[i].value;  
+      dropdownOptions.addEventListener('click', function(e) {
+          if (e.target && e.target.nodeName == "DIV") {
+              var selectedValues = Array.from(this.querySelectorAll('.selected')).map(div => div.dataset.value);
+              var clickedValue = e.target.dataset.value;
 
-        var badge = document.createElement('span');
-        badge.classList.add('badge'); 
-        badge.textContent = symptom;
+              if (selectedValues.includes(clickedValue)) {
+                  e.target.classList.remove('selected');
+              } else {
+                  e.target.classList.add('selected');
+              }
 
-        selectedSymptomsDiv.appendChild(badge);
-    }
-});
+              selectedValues = Array.from(this.querySelectorAll('.selected')).map(div => div.dataset.value);
+              selectedOption.innerHTML = selectedValues.join(', ');
 
+              if (selectedValues.length === dropdownOptions.querySelectorAll('div').length) {
+                  dropdownOptions.classList.add('hidden');
+              }
+          }
+      });
+
+      document.addEventListener('click', function(e) {
+          if (!e.target.matches('#selectedOption')) {
+              if (!dropdownOptions.classList.contains('hidden')) {
+                  dropdownOptions.classList.add('hidden');
+              }
+          }
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+
+        var selectedOption = document.getElementById('selectedOption');
+      var dropdownOptions = document.getElementById('dropdownOptions');
+
+      selectedOption.addEventListener('click', function() {
+          dropdownOptions.classList.toggle('hidden');
+
+        let symptomDiv = document.getElementById('selectedOption');
+        let hiddenInput = document.getElementById('selectedSymptom');
+
+        symptomDiv.addEventListener('click', function() {
+            let selectedSymptom = symptomDiv.innerText;
+            hiddenInput.value = selectedSymptom;
+        });
+
+        console.log('Form submitted');
+        console.log('Hidden Input Value:', hiddenInput.value);
+    });
+  });
 </script>
 {% endblock %}
