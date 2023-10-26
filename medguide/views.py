@@ -15,7 +15,8 @@ def index():
         if request.method == 'POST':
                 age = request.form.get('age')
                 sex = request.form.get('sex')
-                symptom = request.form.get('symptom')
+                symptom = request.form.get('symptom').split(', ')
+
 
                 
                 # print(f'Selected Symptom: {symptom}')
@@ -24,13 +25,7 @@ def index():
                 numerical_columns = np.array(df_drop_target.columns)
                             
                 input_values = {
-                        "itching" : [1],
-                        "skin_rash" : [1],
-                        "nodal_skin_eruptions" : [0],
-                        "inflammatory_nails" : [1],
-                        "chills" : [0],
-                        "yellow_crust_ooze": [0],
-                        "blister": [1]
+                        value : [1] for value in symptom
                 }
 
                 default_input_values = {feature :[0] for feature in numerical_columns}
@@ -61,14 +56,12 @@ def index():
 
                 index = np.where(pred[0] > 0.5)[0][0]
 
-                # return f"{diseases[index][10:]}"
-                return f"{symptom}"
-                # return ','.join(symptom)
-                # return render_template(
-                #         'possible_disease.html', 
-                #         title="Possible disease",
-                #         possible_disease = diseases[index]
-                #         )
+                # return f"{input_values}"
+                return render_template(
+                        'possible_disease.html', 
+                        title="Possible disease",
+                        possible_disease = diseases[index]
+                        )
                 
 
         return render_template('tell_symptoms.html', title="tell symptoms", symptoms_list = symptoms)
