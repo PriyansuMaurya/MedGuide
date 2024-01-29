@@ -15,7 +15,7 @@ def index():
         if request.method == 'POST':
                 age = request.form.get('age')
                 sex = request.form.get('sex')
-                symptom = request.form.getlist('symptom')
+                symptom = request.form.get('symptom')
 
                 
                 # print(f'Selected Symptom: {symptom}')
@@ -23,15 +23,15 @@ def index():
                 df_drop_target = df.drop(['prognosis'],axis =1)
                 numerical_columns = np.array(df_drop_target.columns)
                             
-                if symptom is not None and isinstance(symptom, (list, tuple)):
-                        input_values = {
-                                value : [2] for value in symptom
-                        }
-                else:
-                        input_values = {}
-
-                
-                default_input_values_list = {}
+                input_values = {
+                        "itching" : [1],
+                        "skin_rash" : [1],
+                        "nodal_skin_eruptions" : [0],
+                        "inflammatory_nails" : [1],
+                        "chills" : [0],
+                        "yellow_crust_ooze": [0],
+                        "blister": [1]
+                }
 
                 default_input_values = {feature :[0] for feature in numerical_columns}
 
@@ -59,17 +59,16 @@ def index():
                 pred = final_model.predict(data_scaled)
                 diseases = get_diseases()
 
-                index = np.where(pred[0] > 0.1)[0][0]
+                index = np.where(pred[0] > 0.5)[0][0]
 
                 # return f"{diseases[index][10:]}"
-                # return f"{input_values}"
+                return f"{symptom}"
                 # return ','.join(symptom)
-                # return input_values
-                return render_template(
-                        'possible_disease.html', 
-                        title="Possible disease",
-                        possible_disease = diseases[index][10:]
-                        )
+                # return render_template(
+                #         'possible_disease.html', 
+                #         title="Possible disease",
+                #         possible_disease = diseases[index]
+                #         )
                 
 
         return render_template('tell_symptoms.html', title="tell symptoms", symptoms_list = symptoms)
@@ -103,6 +102,6 @@ def get_symptoms():
 
         symptoms = np.array([column for column in  train_df.columns])
 
-        return np.sort(symptoms)
+        return symptoms
 
 
