@@ -1,0 +1,328 @@
+{
+    "MedicalRecommendationModel": {
+      "disease_data": {
+                "Influenza": {
+                    "prevention": ["Annual flu vaccination", "Frequent handwashing", "Avoid close contact with sick individuals"],
+                    "medication": ["Antiviral drugs (oseltamivir, zanamivir)"]
+                },
+                "Common Cold": {
+                    "prevention": ["Frequent handwashing", "Avoid close contact with sick individuals", "Boosting immune system with vitamins (e.g., vitamin C)"],
+                    "medication": ["Over-the-counter cold remedies (pain relievers, decongestants)"]
+                },
+                "Eczema": {
+                    "prevention": ["Moisturize skin regularly", "Avoid known triggers (e.g., harsh soaps, certain fabrics)", "Use mild, fragrance-free skincare products"],
+                    "medication": ["Topical corticosteroids", "Antihistamines", "Topical calcineurin inhibitors"]
+                },
+                "Asthma": {
+                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
+                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
+                },
+                "Hyperthyroidism": {
+                    "prevention": ["Regular thyroid function tests", "Avoid excessive iodine intake", "Maintain a healthy diet"],
+                    "medication": ["Antithyroid medications (methimazole, propylthiouracil)", "Beta blockers"]
+                },
+                "Allergic Rhinitis": {
+                    "prevention": ["Avoid allergens (pollen, pet dander)", "Use air purifiers indoors", "Close windows during high pollen seasons"],
+                    "medication": ["Antihistamines", "Nasal corticosteroids", "Decongestants"]
+                },
+                "Anxiety Disorders": {
+                    "prevention": ["Practice stress management techniques (e.g., meditation, deep breathing)", "Regular exercise", "Limit caffeine intake"],
+                    "medication": ["Selective serotonin reuptake inhibitors (SSRIs)", "Benzodiazepines", "Beta blockers"]
+                },
+                "Diabetes": {
+                    "prevention": ["Maintain a healthy weight", "Eat a balanced diet low in sugar and refined carbohydrates", "Exercise regularly"],
+                    "medication": ["Insulin", "Oral antidiabetic drugs (metformin, sulfonylureas)", "GLP-1 receptor agonists"]
+                },
+                "Gastroenteritis": {
+                    "prevention": ["Practice good hygiene (handwashing)", "Ensure food safety (proper cooking, storage)", "Avoid contaminated water sources"],
+                    "medication": ["Antibiotics (for bacterial gastroenteritis if necessary)", "Oral rehydration solutions"]
+                },
+                "Pancreatitis": {
+                    "prevention": ["Limit alcohol consumption", "Avoid high-fat or fried foods", "Maintain a healthy weight"],
+                    "medication": ["Pain relievers (acetaminophen)", "Antibiotics (for infected pancreatitis)", "Pancreatic enzyme supplements"]
+                },
+                "Rheumatoid Arthritis": {
+                    "prevention": ["Regular exercise", "Maintain a healthy weight", "Avoid smoking"],
+                    "medication": ["Nonsteroidal anti-inflammatory drugs (NSAIDs)", "Disease-modifying antirheumatic drugs (DMARDs)", "Biologic agents"]
+                },
+                "Depression": {
+                    "prevention": ["Regular exercise", "Healthy diet rich in omega-3 fatty acids", "Seek social support"],
+                    "medication": ["Selective serotonin reuptake inhibitors (SSRIs)", "Serotonin-norepinephrine reuptake inhibitors (SNRIs)", "Tricyclic antidepressants"]
+                },
+                "Liver Cancer": {
+                    "prevention": ["Limit alcohol intake", "Get vaccinated against hepatitis B", "Avoid exposure to hepatitis C"],
+                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
+                },
+                "Stroke": {
+                    "prevention": ["Maintain a healthy weight", "Control high blood pressure", "Quit smoking"],
+                    "medication": ["Antiplatelet drugs (aspirin)", "Anticoagulants (warfarin, dabigatran)", "Thrombolytic drugs (tissue plasminogen activator)"]
+                },
+                "Urinary Tract Infection": {
+                    "prevention": ["Stay hydrated", "Practice good hygiene (wiping from front to back)", "Urinate after sexual intercourse"],
+                    "medication": ["Antibiotics (trimethoprim-sulfamethoxazole, ciprofloxacin)"]
+                },
+                "Dengue Fever": {
+                    "prevention": ["Eliminate mosquito breeding sites", "Use mosquito repellent", "Wear long-sleeved shirts and long pants"],
+                    "medication": ["Symptomatic treatment (pain relievers like acetaminophen)", "Fluid replacement therapy"]
+                },
+                "Kidney Cancer": {
+                    "prevention": ["Quit smoking", "Maintain a healthy weight", "Stay hydrated"],
+                    "medication": ["Targeted therapy", "Immunotherapy", "Chemotherapy"]
+                },
+                "Migraine": {
+                    "prevention": ["Identify and avoid triggers (e.g., certain foods, stress)", "Regular sleep schedule", "Stay hydrated"],
+                    "medication": ["Pain relievers (ibuprofen, acetaminophen)", "Triptans", "Preventive medications (beta blockers, antidepressants)"]
+                },
+                "Muscular Dystrophy": {
+                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
+                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
+                },
+                "Sinusitis": {
+                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
+                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
+                },
+                "Ulcerative Colitis": {
+                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
+                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
+                },
+                "Bipolar Disorder": {
+                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
+                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
+                },
+                "Bronchitis": {
+                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
+                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
+                },
+                "Cerebral Palsy": {
+                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
+                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
+                },
+                "Colorectal Cancer": {
+                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
+                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
+                },
+                "Hypertensive Heart Disease": {
+                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
+                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
+                },
+                "Multiple Sclerosis": {
+                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
+                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
+                },
+                "Myocardial Infarction (Heart Attack)": {
+                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
+                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
+                },
+                "Osteoporosis": {
+                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
+                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
+                },
+                "Pneumonia": {
+                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
+                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
+                },
+                "Psoriasis": {
+                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
+                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
+                },
+                "Rubella": {
+                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
+                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
+                },
+                "Cirrhosis": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Conjunctivitis (Pink Eye)": {
+                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
+                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
+                },
+                "Kidney Disease": {
+                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
+                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
+                },
+                "Liver Disease": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Malaria": {
+                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
+                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
+                },
+                "Muscular Dystrophy": {
+                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
+                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
+                },
+                "Sinusitis": {
+                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
+                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
+                },
+                "Ulcerative Colitis": {
+                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
+                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
+                },
+                "Asthma": {
+                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
+                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
+                },
+                "Bipolar Disorder": {
+                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
+                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
+                },
+                "Bronchitis": {
+                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
+                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
+                },
+                "Cerebral Palsy": {
+                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
+                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
+                },
+                "Colorectal Cancer": {
+                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
+                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
+                },
+                "Hypertensive Heart Disease": {
+                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
+                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
+                },
+                "Multiple Sclerosis": {
+                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
+                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
+                },
+                "Myocardial Infarction (Heart Attack)": {
+                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
+                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
+                },
+                "Osteoporosis": {
+                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
+                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
+                },
+                "Pneumonia": {
+                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
+                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
+                },
+                "Psoriasis": {
+                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
+                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
+                },
+                "Rubella": {
+                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
+                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
+                },
+                "Cirrhosis": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Conjunctivitis (Pink Eye)": {
+                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
+                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
+                },
+                "Kidney Disease": {
+                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
+                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
+                },
+                "Liver Disease": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Malaria": {
+                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
+                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
+                },
+                "Muscular Dystrophy": {
+                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
+                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
+                },
+                "Sinusitis": {
+                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
+                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
+                },
+                "Ulcerative Colitis": {
+                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
+                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
+                },
+                "Asthma": {
+                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
+                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
+                },
+                "Bipolar Disorder": {
+                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
+                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
+                },
+                "Bronchitis": {
+                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
+                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
+                },
+                "Cerebral Palsy": {
+                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
+                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
+                },
+                "Colorectal Cancer": {
+                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
+                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
+                },
+                "Hypertensive Heart Disease": {
+                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
+                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
+                },
+                "Multiple Sclerosis": {
+                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
+                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
+                },
+                "Myocardial Infarction (Heart Attack)": {
+                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
+                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
+                },
+                "Osteoporosis": {
+                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
+                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
+                },
+                "Pneumonia": {
+                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
+                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
+                },
+                "Psoriasis": {
+                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
+                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
+                },
+                "Rubella": {
+                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
+                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
+                },
+                "Cirrhosis": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Conjunctivitis (Pink Eye)": {
+                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
+                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
+                },
+                "Kidney Disease": {
+                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
+                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
+                },
+                "Liver Disease": {
+                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
+                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
+                },
+                "Malaria": {
+                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
+                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
+                },
+                "Muscular Dystrophy": {
+                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
+                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
+                },
+                "Sinusitis": {
+                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
+                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
+                },
+                "Ulcerative Colitis": {
+                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
+                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
+                }
+            }
+        }
+    }
+
+    

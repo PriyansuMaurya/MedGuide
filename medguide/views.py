@@ -34,6 +34,7 @@ def index():
                 default_input_values_list = {}
 
                 default_input_values = {feature :[0] for feature in numerical_columns}
+                # print(symptom)
 
                 # Updating the default input values with the symptoms that are given by the patients.
                 default_input_values.update(input_values)
@@ -46,29 +47,26 @@ def index():
                 # else:
                 input_df = pd.DataFrame(default_input_values)
 
-                model = dill.load(open('artifacts/preprocessor_v1.pkl', 'rb'))
-                final_model = dill.load(open('artifacts/best_model_v1.pkl', 'rb'))
-                
-                # Transform the input data
-                data_scaled = model.transform(input_df)
-
-                # Evaluate the performance of the model
-                # print(data_scaled)
+                # model = dill.load(open('artifacts/preprocessor_v1.pkl', 'rb'))
+                random_forest = dill.load(open('artifacts/best_model_v2.pkl', 'rb'))
+                k_neighbour = dill.load(open('artifacts/K-Neighbors_v2.pkl', 'rb'))
+                svm = dill.load(open('artifacts/svm_v2.pkl', 'rb'))
 
                 # Make predictions
-                pred = final_model.predict(data_scaled)
-                diseases = get_diseases()
+                pred_1 = random_forest.predict(input_df)
+                pred_2 = k_neighbour.predict(input_df)
+                pred_3 = svm.predict(input_df)
 
-                index = np.where(pred[0] > 0.1)[0][0]
+                possible_disease = [pred_1, pred_2, pred_3]
+                # unique_words = list(dict.fromkeys(possible_disease))
 
-                # return f"{diseases[index][10:]}"
-                # return f"{input_values}"
-                # return ','.join(symptom)
-                # return input_values
+                unique_list = []
+                [unique_list.append(x) for x in possible_disease if x not in unique_list]
+                
                 return render_template(
                         'possible_disease.html', 
                         title="Possible disease",
-                        possible_disease = diseases[index][10:]
+                        possible_disease = unique_list
                         )
                 
 
