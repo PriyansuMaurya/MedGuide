@@ -6,8 +6,13 @@ extents = Blueprint('extents',__name__)
 
 @extents.route("/suggestions", methods=['GET', 'POST'])
 def suggestions():
-      
-        return render_template('suggestions.html', title="Suggestions")
+        # clicked_button_name
+        if request.method == 'POST':
+                disease = request.form.get('clicked_button_name')
+                
+                return render_template('suggestions.html', title="Suggestions", prescription = disease)
+                
+        # return f"{'shivam'}"
 
 @extents.route("/faqs", methods=['GET', 'POST'])
 def faqs(): 
