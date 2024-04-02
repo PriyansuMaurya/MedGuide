@@ -4,55 +4,80 @@
 
 {% block div %}
 <div class="mt-[93px] flex items-center justify-center">
-    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-l-[50px] cursor-pointer">
-      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms
-      </p>
-    </div>
-    <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer">
-      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
-    </div>
-    <div
-      class="w-[365.33px] h-[58px]  flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF] border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
-      <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
-    </div>
+  <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center rounded-l-[50px] cursor-pointer">
+    <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 1: Tell us about your symptoms
+    </p>
+  </div>
+  <div class="w-[365.33px] h-[58px] bg-[#17191C] flex items-center justify-center cursor-pointer">
+    <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 2: Possible Disease</p>
+  </div>
+  <div
+    class="w-[365.33px] h-[58px]  flex items-center justify-center cursor-pointer rounded-r-[50px] border-l border-l-[#FFF] border-[1px] border-white bg-gradient-to-r from-[#BAC] to-[#BAC] via-[#E1709B]">
+    <p class="text-[#FFF] font-['Inter'] text-[18px] font-normal leading-normal">Step 3: Suggestions</p>
+  </div>
 </div>
 
 <div class="flex items-center justify-center mt-[24px]">
-  <div class="w-[1094px] h-[380px] rounded-[28px] bg-[#222327]">
-    <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">{{prescription[2:-2]}}</p>
+  <div class="w-max-content h-auto rounded-[28px] bg-[#222327]">
+    <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">
+      {{disease_name}}</p>
 
     <div class="inline-flex items-center justify-center">
-      <div
-        class="w-[317px] h-[249px] mt-[31px] ml-[37px] p-[24px] flex flex-col items-center justify-center text-ellipsis whitespace-nowrap rounded-[28px] border-[1px] border-[#FFF] bg-[#141516]">
-        <p
-          class="w-[261px] h-[100px] overflow-hidden text-[#C4C7C5] font-['Inter'] text-[16px] font-normal leading-normal">
-          These papers cover a wide range of machine learning algorithms. These papers cover a wide range of machine
-          learning algorithms </p>
-        <ul class="text-[#C4C7C5] w-[259px] h-[155px] mt-[14px] ml-[26px]" style="list-style-type: disc;">
-          <li></li>
-          <li>Ensemble Learning methods</li>
-          <li>Genetic programming</li>
-          <li>Rule-based systems Naive Bayes.</li>
-        </ul>
-      </div>
-      <div
-        class="w-[317px] h-[249px] mt-[31px] ml-[33px] p-[24px] flex flex-col items-center justify-center text-ellipsis whitespace-nowrap rounded-[28px] border-[1px] border-[#FFF] bg-[#141516]">
-        <p
-          class="w-[261px] h-[205px] overflow-hidden text-[#C4C7C5] font-['Inter'] text-[16px] font-normal leading-normal">
-          These papers cover a wide range of machine learning algorithms and techniques that have been used for Iris
-          flower classification. Some of the most popular algorithms include neural networks, support vector machines,
-          decision trees, ensemble learning methods, genetic programming, fuzzy logic, rule-based systems, and naive
-          Bayes.</p>
-      </div>
-      <div
-        class="w-[317px] h-[249px] mt-[31px] ml-[33px] p-[24px] flex flex-col items-center justify-center text-ellipsis whitespace-nowrap rounded-[28px] border-[1px] border-[#FFF] bg-[#141516]">
-        <p
-          class="w-[261px] h-[205px] overflow-hidden text-[#C4C7C5] font-['Inter'] text-[16px] font-normal leading-normal">
-          These papers cover a wide range of machine learning algorithms and techniques that have been used for Iris
-          flower classification. Some of the most popular algorithms include neural networks, support vector machines,
-          decision trees, ensemble learning methods, genetic programming, fuzzy logic, rule-based systems, and naive
-          Bayes.</p>
-      </div>
+      <section
+        class="container mx-auto p-10 md:p-20 grid lg:grid-cols-3 2xl:grid-cols-3 grid-cols-1 gap-y-10 transform duration-500">
+        <article
+          class="shadow-md mx-auto max-w-sm transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
+          <div class="max-h-140 overflow-hidden">
+            <img class="w-full h-auto"
+              src="https://images.squarespace-cdn.com/content/v1/58dd442dbebafb88160c6929/1524859470168-GEDZWSZVFS2VN76NFZY0/ke17ZwdGBToddI8pDm48kPvdHwxe8vxmYnjZvCzAU61Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwxsJYjeBOStWfhZBaQGTlDOVYbSZjX976lCUHHLPdHUlrmON35exl807wLzw9VMGw/visit06.jpg?format=800w"
+              alt="">
+          </div>
+          <div class="p-7 my-auto pb-12 border-[1px] border-[#FFF] rounded-2xl">
+            <h1 class="text-2xl font-semibold text-slate-200">Overview</h1>
+            <p class="text-xl font-light leading-relaxed text-gray-400 mt-5">
+              {{prescription['overview']}}
+            </p>
+          </div>
+        </article>
+        <article
+          class="shadow-md mx-auto max-w-sm transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
+          <div class="max-h-140 overflow-hidden">
+            <img class="w-full h-auto"
+              src="https://images.squarespace-cdn.com/content/v1/58dd442dbebafb88160c6929/1593716780236-POZ4F9TRGHIMKVVZRK7U/ke17ZwdGBToddI8pDm48kPvdHwxe8vxmYnjZvCzAU61Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwxsJYjeBOStWfhZBaQGTlDOVYbSZjX976lCUHHLPdHUlrmON35exl807wLzw9VMGw/visitshire.jpg?format=800w"
+              alt="">
+          </div>
+          <div class="p-7 my-auto pb-12 border-[1px] border-[#FFF] rounded-2xl">
+            <h1 class="text-2xl font-semibold text-slate-200">Preventions</h1>
+            <p class="mt-5">
+            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-[155px] pl-2 list-disc">
+              {% for prevention_items in prescription['prevention'] %}
+              <li>{{prevention_items}}</li>
+              {% endfor %}
+            </ul>
+            </p>
+          </div>
+        </article>
+        <article
+          class="shadow-md mx-auto max-w-sm transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer ">
+          <div class="max-h-140 overflow-hidden">
+            <img class="w-full h-auto"
+              src="https://images.squarespace-cdn.com/content/v1/58dd442dbebafb88160c6929/1524859465160-0HQ919Q839O3K565JUCK/ke17ZwdGBToddI8pDm48kPvdHwxe8vxmYnjZvCzAU61Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwxsJYjeBOStWfhZBaQGTlDOVYbSZjX976lCUHHLPdHUlrmON35exl807wLzw9VMGw/visit02.jpg?format=800w"
+              alt="">
+          </div>
+          <div class="p-7 my-auto pb-12 border-[1px] border-[#FFF] rounded-2xl">
+            <h1 class="text-2xl font-semibold text-slate-200">
+              Medications
+            </h1>
+            <p class="mt-5">
+            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-[155px] pl-2 list-disc">
+              {% for medication_items in prescription['medication'] %}
+              <li>{{medication_items}}</li>
+              {% endfor %}
+            </ul>
+            </p>
+          </div>
+        </article>
+      </section>
     </div>
   </div>
 </div>

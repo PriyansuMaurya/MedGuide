@@ -1,328 +1,484 @@
 {
-    "MedicalRecommendationModel": {
-      "disease_data": {
-                "Influenza": {
-                    "prevention": ["Annual flu vaccination", "Frequent handwashing", "Avoid close contact with sick individuals"],
-                    "medication": ["Antiviral drugs (oseltamivir, zanamivir)"]
-                },
-                "Common Cold": {
-                    "prevention": ["Frequent handwashing", "Avoid close contact with sick individuals", "Boosting immune system with vitamins (e.g., vitamin C)"],
-                    "medication": ["Over-the-counter cold remedies (pain relievers, decongestants)"]
-                },
-                "Eczema": {
-                    "prevention": ["Moisturize skin regularly", "Avoid known triggers (e.g., harsh soaps, certain fabrics)", "Use mild, fragrance-free skincare products"],
-                    "medication": ["Topical corticosteroids", "Antihistamines", "Topical calcineurin inhibitors"]
-                },
-                "Asthma": {
-                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
-                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
-                },
-                "Hyperthyroidism": {
-                    "prevention": ["Regular thyroid function tests", "Avoid excessive iodine intake", "Maintain a healthy diet"],
-                    "medication": ["Antithyroid medications (methimazole, propylthiouracil)", "Beta blockers"]
-                },
-                "Allergic Rhinitis": {
-                    "prevention": ["Avoid allergens (pollen, pet dander)", "Use air purifiers indoors", "Close windows during high pollen seasons"],
-                    "medication": ["Antihistamines", "Nasal corticosteroids", "Decongestants"]
-                },
-                "Anxiety Disorders": {
-                    "prevention": ["Practice stress management techniques (e.g., meditation, deep breathing)", "Regular exercise", "Limit caffeine intake"],
-                    "medication": ["Selective serotonin reuptake inhibitors (SSRIs)", "Benzodiazepines", "Beta blockers"]
-                },
-                "Diabetes": {
-                    "prevention": ["Maintain a healthy weight", "Eat a balanced diet low in sugar and refined carbohydrates", "Exercise regularly"],
-                    "medication": ["Insulin", "Oral antidiabetic drugs (metformin, sulfonylureas)", "GLP-1 receptor agonists"]
-                },
-                "Gastroenteritis": {
-                    "prevention": ["Practice good hygiene (handwashing)", "Ensure food safety (proper cooking, storage)", "Avoid contaminated water sources"],
-                    "medication": ["Antibiotics (for bacterial gastroenteritis if necessary)", "Oral rehydration solutions"]
-                },
-                "Pancreatitis": {
-                    "prevention": ["Limit alcohol consumption", "Avoid high-fat or fried foods", "Maintain a healthy weight"],
-                    "medication": ["Pain relievers (acetaminophen)", "Antibiotics (for infected pancreatitis)", "Pancreatic enzyme supplements"]
-                },
-                "Rheumatoid Arthritis": {
-                    "prevention": ["Regular exercise", "Maintain a healthy weight", "Avoid smoking"],
-                    "medication": ["Nonsteroidal anti-inflammatory drugs (NSAIDs)", "Disease-modifying antirheumatic drugs (DMARDs)", "Biologic agents"]
-                },
-                "Depression": {
-                    "prevention": ["Regular exercise", "Healthy diet rich in omega-3 fatty acids", "Seek social support"],
-                    "medication": ["Selective serotonin reuptake inhibitors (SSRIs)", "Serotonin-norepinephrine reuptake inhibitors (SNRIs)", "Tricyclic antidepressants"]
-                },
-                "Liver Cancer": {
-                    "prevention": ["Limit alcohol intake", "Get vaccinated against hepatitis B", "Avoid exposure to hepatitis C"],
-                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
-                },
-                "Stroke": {
-                    "prevention": ["Maintain a healthy weight", "Control high blood pressure", "Quit smoking"],
-                    "medication": ["Antiplatelet drugs (aspirin)", "Anticoagulants (warfarin, dabigatran)", "Thrombolytic drugs (tissue plasminogen activator)"]
-                },
-                "Urinary Tract Infection": {
-                    "prevention": ["Stay hydrated", "Practice good hygiene (wiping from front to back)", "Urinate after sexual intercourse"],
-                    "medication": ["Antibiotics (trimethoprim-sulfamethoxazole, ciprofloxacin)"]
-                },
-                "Dengue Fever": {
-                    "prevention": ["Eliminate mosquito breeding sites", "Use mosquito repellent", "Wear long-sleeved shirts and long pants"],
-                    "medication": ["Symptomatic treatment (pain relievers like acetaminophen)", "Fluid replacement therapy"]
-                },
-                "Kidney Cancer": {
-                    "prevention": ["Quit smoking", "Maintain a healthy weight", "Stay hydrated"],
-                    "medication": ["Targeted therapy", "Immunotherapy", "Chemotherapy"]
-                },
-                "Migraine": {
-                    "prevention": ["Identify and avoid triggers (e.g., certain foods, stress)", "Regular sleep schedule", "Stay hydrated"],
-                    "medication": ["Pain relievers (ibuprofen, acetaminophen)", "Triptans", "Preventive medications (beta blockers, antidepressants)"]
-                },
-                "Muscular Dystrophy": {
-                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
-                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
-                },
-                "Sinusitis": {
-                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
-                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
-                },
-                "Ulcerative Colitis": {
-                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
-                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
-                },
-                "Bipolar Disorder": {
-                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
-                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
-                },
-                "Bronchitis": {
-                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
-                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
-                },
-                "Cerebral Palsy": {
-                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
-                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
-                },
-                "Colorectal Cancer": {
-                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
-                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
-                },
-                "Hypertensive Heart Disease": {
-                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
-                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
-                },
-                "Multiple Sclerosis": {
-                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
-                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
-                },
-                "Myocardial Infarction (Heart Attack)": {
-                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
-                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
-                },
-                "Osteoporosis": {
-                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
-                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
-                },
-                "Pneumonia": {
-                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
-                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
-                },
-                "Psoriasis": {
-                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
-                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
-                },
-                "Rubella": {
-                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
-                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
-                },
-                "Cirrhosis": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Conjunctivitis (Pink Eye)": {
-                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
-                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
-                },
-                "Kidney Disease": {
-                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
-                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
-                },
-                "Liver Disease": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Malaria": {
-                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
-                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
-                },
-                "Muscular Dystrophy": {
-                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
-                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
-                },
-                "Sinusitis": {
-                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
-                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
-                },
-                "Ulcerative Colitis": {
-                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
-                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
-                },
-                "Asthma": {
-                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
-                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
-                },
-                "Bipolar Disorder": {
-                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
-                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
-                },
-                "Bronchitis": {
-                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
-                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
-                },
-                "Cerebral Palsy": {
-                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
-                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
-                },
-                "Colorectal Cancer": {
-                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
-                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
-                },
-                "Hypertensive Heart Disease": {
-                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
-                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
-                },
-                "Multiple Sclerosis": {
-                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
-                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
-                },
-                "Myocardial Infarction (Heart Attack)": {
-                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
-                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
-                },
-                "Osteoporosis": {
-                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
-                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
-                },
-                "Pneumonia": {
-                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
-                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
-                },
-                "Psoriasis": {
-                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
-                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
-                },
-                "Rubella": {
-                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
-                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
-                },
-                "Cirrhosis": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Conjunctivitis (Pink Eye)": {
-                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
-                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
-                },
-                "Kidney Disease": {
-                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
-                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
-                },
-                "Liver Disease": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Malaria": {
-                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
-                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
-                },
-                "Muscular Dystrophy": {
-                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
-                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
-                },
-                "Sinusitis": {
-                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
-                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
-                },
-                "Ulcerative Colitis": {
-                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
-                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
-                },
-                "Asthma": {
-                    "prevention": ["Identify and avoid triggers (e.g., allergens, smoke)", "Use air filters indoors", "Monitor lung function regularly"],
-                    "medication": ["Inhaled corticosteroids", "Short-acting bronchodilators (albuterol)", "Long-acting bronchodilators"]
-                },
-                "Bipolar Disorder": {
-                    "prevention": ["Regular exercise", "Maintain a stable routine", "Avoid alcohol and drugs"],
-                    "medication": ["Mood stabilizers (lithium, valproate)", "Antipsychotics", "Antidepressants (for depressive episodes)"]
-                },
-                "Bronchitis": {
-                    "prevention": ["Avoid smoking and secondhand smoke", "Practice good hand hygiene", "Get vaccinated against influenza"],
-                    "medication": ["Bronchodilators", "Cough suppressants", "Antibiotics (for bacterial bronchitis if necessary)"]
-                },
-                "Cerebral Palsy": {
-                    "prevention": ["Prenatal care to prevent birth complications", "Early detection and treatment of developmental issues", "Physical therapy"],
-                    "medication": ["Medications to manage symptoms (muscle relaxants, antispasmodics)", "Physical and occupational therapy"]
-                },
-                "Colorectal Cancer": {
-                    "prevention": ["Eat a high-fiber, low-fat diet", "Regular colorectal cancer screening", "Limit alcohol consumption"],
-                    "medication": ["Chemotherapy", "Targeted therapy", "Immunotherapy"]
-                },
-                "Hypertensive Heart Disease": {
-                    "prevention": ["Maintain a healthy weight", "Exercise regularly", "Limit alcohol intake"],
-                    "medication": ["ACE inhibitors", "Beta blockers", "Diuretics"]
-                },
-                "Multiple Sclerosis": {
-                    "prevention": ["Maintain a healthy lifestyle", "Vitamin D supplementation", "Avoid smoking"],
-                    "medication": ["Immunomodulators (interferons, glatiramer acetate)", "Corticosteroids (for acute exacerbations)", "Symptomatic treatments (muscle relaxants, antidepressants)"]
-                },
-                "Myocardial Infarction (Heart Attack)": {
-                    "prevention": ["Healthy diet low in saturated fats and cholesterol", "Regular exercise", "Control high blood pressure and cholesterol levels"],
-                    "medication": ["Aspirin", "Beta blockers", "ACE inhibitors"]
-                },
-                "Osteoporosis": {
-                    "prevention": ["Adequate calcium and vitamin D intake", "Regular weight-bearing exercise", "Avoid smoking and excessive alcohol intake"],
-                    "medication": ["Bisphosphonates", "Calcium and vitamin D supplements", "Hormone therapy (for postmenopausal women)"]
-                },
-                "Pneumonia": {
-                    "prevention": ["Pneumococcal vaccination", "Annual flu vaccination", "Good hygiene practices (handwashing, covering mouth when coughing or sneezing)"],
-                    "medication": ["Antibiotics (for bacterial pneumonia)", "Antiviral drugs (for viral pneumonia)"]
-                },
-                "Psoriasis": {
-                    "prevention": ["Avoid triggers (stress, skin injuries)", "Regular moisturizing", "Limit alcohol consumption"],
-                    "medication": ["Topical corticosteroids", "Topical calcineurin inhibitors", "Systemic medications (methotrexate, cyclosporine)"]
-                },
-                "Rubella": {
-                    "prevention": ["MMR vaccination (measles, mumps, rubella)", "Avoid contact with infected individuals"],
-                    "medication": ["No specific antiviral treatment; supportive care for symptoms"]
-                },
-                "Cirrhosis": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Regular liver screenings"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Conjunctivitis (Pink Eye)": {
-                    "prevention": ["Practice good hygiene (avoid touching eyes, wash hands frequently)", "Avoid sharing towels or eye makeup", "Avoid contact with infected individuals"],
-                    "medication": ["Antibiotic eye drops (for bacterial conjunctivitis)", "Antihistamine eye drops (for allergic conjunctivitis)", "Artificial tears"]
-                },
-                "Kidney Disease": {
-                    "prevention": ["Control blood pressure", "Maintain healthy blood sugar levels (for diabetes)", "Limit intake of NSAIDs and other nephrotoxic drugs"],
-                    "medication": ["ACE inhibitors", "Angiotensin II receptor blockers (ARBs)", "Diuretics"]
-                },
-                "Liver Disease": {
-                    "prevention": ["Limit alcohol consumption", "Hepatitis vaccination", "Avoid exposure to hepatitis viruses"],
-                    "medication": ["Treatment of underlying causes (e.g., antiviral drugs for hepatitis)", "Symptomatic treatment (diuretics, beta blockers)"]
-                },
-                "Malaria": {
-                    "prevention": ["Use insect repellent", "Sleep under insecticide-treated bed nets", "Take antimalarial medications when traveling to endemic areas"],
-                    "medication": ["Antimalarial drugs (chloroquine, mefloquine)", "Artemisinin-based combination therapies"]
-                },
-                "Muscular Dystrophy": {
-                    "prevention": ["Genetic counseling for at-risk families", "Physical therapy to maintain muscle strength", "Assistive devices for mobility"],
-                    "medication": ["No specific medications to treat muscular dystrophy, but symptomatic treatment for complications (e.g., pain management)"]
-                },
-                "Sinusitis": {
-                    "prevention": ["Avoid allergens (pollen, dust)", "Use a humidifier to keep air moist", "Nasal irrigation with saline solution"],
-                    "medication": ["Decongestants", "Antibiotics (for bacterial sinusitis)", "Nasal corticosteroids"]
-                },
-                "Ulcerative Colitis": {
-                    "prevention": ["Maintain a healthy diet", "Stay hydrated", "Manage stress levels"],
-                    "medication": ["Aminosalicylates", "Corticosteroids", "Immunomodulators"]
-                }
-            }
-        }
+    "Hepatitis C": {
+        "overview": "Hepatitis C is a viral liver disease caused by the hepatitis C virus (HCV). It is primarily transmitted through contact with infected blood, often through sharing needles or other drug paraphernalia, receiving blood transfusions or organ transplants from infected donors, or through unprotected sexual contact with an infected person. Hepatitis C can lead to chronic liver disease, liver cirrhosis, and liver cancer.",
+        "prevention": [
+            "Avoiding sharing needles, syringes, and other drug paraphernalia",
+            "Practicing safe sex and using condoms consistently",
+            "Ensuring safe blood transfusions and medical procedures",
+            "Screening blood donors and organ donors for hepatitis C"
+        ],
+        "medication": [
+            "Antiviral medications (such as direct-acting antivirals) are used to treat hepatitis C and can cure the infection in many cases."
+        ]
+    },
+    "Hepatitis D": {
+        "overview": "Hepatitis D, also known as delta hepatitis, is a liver infection caused by the hepatitis D virus (HDV). It is only able to infect individuals who are already infected with hepatitis B virus (HBV). Hepatitis D is transmitted through contact with infected blood or body fluids, sharing needles or syringes, or from mother to child during childbirth. It can lead to severe liver damage and may exacerbate the symptoms of hepatitis B infection.",
+        "prevention": [
+            "Preventing hepatitis B infection through vaccination and practicing safe sex",
+            "Avoiding sharing needles or other drug paraphernalia",
+            "Screening pregnant women for hepatitis B and providing antiviral medications to prevent mother-to-child transmission"
+        ],
+        "medication": [
+            "There is no specific treatment for hepatitis D. Antiviral medications may be used to manage symptoms and complications, but they are often less effective than for other types of hepatitis."
+        ]
+    },
+    "Hepatitis E": {
+        "overview": "Hepatitis E is a viral liver disease caused by the hepatitis E virus (HEV). It is primarily transmitted through consumption of contaminated food or water, particularly in areas with poor sanitation and hygiene practices. Hepatitis E infection is usually acute and self-limited, with symptoms similar to other forms of viral hepatitis, including fever, jaundice, nausea, and abdominal pain.",
+        "prevention": [
+            "Drinking clean, safe water and avoiding untreated water or ice",
+            "Avoiding consumption of undercooked or raw meat, particularly pork and game meat",
+            "Practicing good hygiene, including frequent handwashing",
+            "Ensuring proper sanitation and waste disposal practices"
+        ],
+        "medication": [
+            "There is no specific treatment for hepatitis E. Supportive care may include rest, adequate nutrition, and avoiding alcohol and certain medications that can further damage the liver."
+        ]
+    },
+    "Alcoholic hepatitis": {
+        "overview": "Alcoholic hepatitis is inflammation of the liver caused by excessive alcohol consumption. It is considered a form of alcoholic liver disease and can range from mild to severe. Prolonged heavy drinking can lead to liver damage, cirrhosis, and liver failure. Symptoms may include jaundice, abdominal pain, nausea, vomiting, and fever.",
+        "prevention": [
+            "Limiting alcohol consumption and avoiding binge drinking",
+            "Seeking help and support for alcohol dependence or addiction",
+            "Eating a balanced diet and maintaining a healthy weight",
+            "Regularly monitoring liver function and seeking medical advice if any symptoms develop"
+        ],
+        "medication": [
+            "Abstinence from alcohol is the most important treatment for alcoholic hepatitis. Other treatments may include corticosteroids, pentoxifylline, and nutritional support."
+        ]
+    },
+    "Tuberculosis": {
+        "overview": "Tuberculosis (TB) is a bacterial infection caused by Mycobacterium tuberculosis. It primarily affects the lungs but can also involve other organs. TB is transmitted through the air when an infected person coughs or sneezes. Symptoms may include persistent cough, fever, night sweats, weight loss, and fatigue. TB can be latent (asymptomatic) or active (symptomatic) and may become life-threatening if not treated.",
+        "prevention": [
+            "Getting vaccinated with the bacille Calmette-Guérin (BCG) vaccine (especially in high-risk areas)",
+            "Avoiding close contact with people with active TB",
+            "Proper ventilation and respiratory hygiene practices",
+            "Completing antibiotic treatment for latent TB infection to prevent progression to active TB"
+        ],
+        "medication": [
+            "Antibiotics (such as isoniazid, rifampin, ethambutol) are used to treat active TB infection. Treatment typically involves a combination of antibiotics taken for several months."
+        ]
+    },
+    "Common Cold": {
+        "overview": "The common cold is a viral infection of the upper respiratory tract caused by various viruses, including rhinoviruses, coronaviruses, and adenoviruses. It is characterized by symptoms such as sore throat, runny or stuffy nose, sneezing, coughing, headache, and mild fever. The common cold is highly contagious and usually resolves on its own within a week.",
+        "prevention": [
+            "Frequent handwashing with soap and water",
+            "Avoiding close contact with infected individuals",
+            "Covering coughs and sneezes with a tissue or the elbow",
+            "Avoiding touching the face, especially the eyes, nose, and mouth"
+        ],
+        "medication": [
+            "Treatment is primarily supportive and may include over-the-counter medications to relieve symptoms, such as pain relievers, decongestants, and cough suppressants."
+        ]
+    },
+    "Pneumonia": {
+        "overview": "Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus, causing symptoms such as cough with phlegm, fever, chills, and difficulty breathing. Pneumonia can be caused by bacteria, viruses, or fungi and can range in severity from mild to life-threatening. It is a leading cause of death worldwide, particularly among young children , older adults, and people with weakened immune systems.,older adults, and people with weakened immune systems.",
+        "prevention": [
+            "Getting vaccinated against pneumococcal pneumonia and influenza",
+            "Practicing good hygiene, including frequent handwashing",
+            "Avoiding smoking and exposure to secondhand smoke",
+            "Seeking prompt medical attention for respiratory infections"
+        ],
+        "medication": [
+            "Antibiotics (such as penicillin, azithromycin) are used to treat bacterial pneumonia. Antiviral medications may be prescribed for viral pneumonia. Supportive care, including oxygen therapy and fluids, may also be necessary."
+        ]
+    },
+    "Dimorphic hemorrhoids (piles)": {
+        "overview": "Hemorrhoids, also known as piles, are swollen veins in the lower rectum or anus. They can be internal or external and may cause symptoms such as pain, itching, bleeding, and protrusion. Hemorrhoids can result from increased pressure in the veins of the rectum or anus, often due to straining during bowel movements, chronic constipation, or pregnancy.",
+        "prevention": [
+            "Eating a high-fiber diet to prevent constipation",
+            "Drinking plenty of fluids to maintain regular bowel movements",
+            "Avoiding prolonged sitting or straining during bowel movements",
+            "Exercising regularly to improve circulation and bowel function"
+        ],
+        "medication": [
+            "Over-the-counter medications such as topical creams, suppositories, and hemorrhoid pads may provide relief from symptoms. In severe cases, procedures such as rubber band ligation or surgical removal may be necessary."
+        ]
+    },
+    "Heart attack": {
+        "overview": "A heart attack, also known as a myocardial infarction (MI), occurs when blood flow to a part of the heart muscle is blocked, usually by a blood clot. This deprives the heart of oxygen and can cause damage or death to the affected heart tissue. Symptoms of a heart attack may include chest pain or discomfort, shortness of breath, nausea, sweating, and pain or discomfort in the arms, back, neck, jaw, or stomach.",
+        "prevention": [
+            "Maintaining a healthy diet low in saturated fats, cholesterol, and sodium",
+            "Exercising regularly and maintaining a healthy weight",
+            "Avoiding tobacco smoke and limiting alcohol consumption",
+            "Managing and controlling underlying risk factors such as hypertension, diabetes, and high cholesterol"
+        ],
+        "medication": [
+            "Treatment for a heart attack may include medications to dissolve blood clots, relieve chest pain, lower blood pressure, and stabilize the heart rhythm. In some cases, procedures such as angioplasty or coronary artery bypass surgery may be necessary to restore blood flow to the heart."
+        ]
+    },
+    "Varicose veins": {
+        "overview": "Varicose veins are swollen, twisted veins that usually occur in the legs. They are caused by weak or damaged vein walls and valves, which can lead to pooling of blood and increased pressure in the veins. Varicose veins may appear blue or purple, and symptoms can include pain, swelling, heaviness, and aching in the legs, especially after prolonged standing or sitting.",
+        "prevention": [
+            "Maintaining a healthy weight and regular exercise to improve circulation",
+            "Avoiding prolonged periods of sitting or standing",
+            "Elevating the legs when resting or sleeping",
+            "Wearing compression stockings to improve blood flow and reduce swelling"
+        ],
+        "medication": [
+            "Treatment for varicose veins may include lifestyle modifications, such as wearing compression stockings, and procedures such as sclerotherapy, laser therapy, or vein stripping to remove or close off affected veins."
+        ]
+    },
+    "Hypothyroidism": {
+        "overview": "Hypothyroidism is a condition in which the thyroid gland does not produce enough thyroid hormone to meet the body's needs. It can result in a variety of symptoms, including fatigue, weight gain, cold intolerance, constipation, dry skin, hair loss, and depression. Hypothyroidism is usually caused by autoimmune thyroiditis, thyroid surgery, or radiation therapy.",
+        "prevention": [
+            "There is no specific prevention for hypothyroidism, but regular thyroid function tests can help detect and manage the condition early."
+        ],
+        "medication": [
+            "Treatment for hypothyroidism involves lifelong thyroid hormone replacement therapy with medications such as levothyroxine (Synthroid)."
+        ]
+    },
+    "Hyperthyroidism": {
+        "overview": "Hyperthyroidism is a condition in which the thyroid gland produces too much thyroid hormone. It can result in symptoms such as weight loss, rapid heartbeat, tremors, sweating, heat intolerance, nervousness, and fatigue. Hyperthyroidism may be caused by conditions such as Graves' disease, thyroid nodules, or thyroiditis.",
+        "prevention": [
+            "There is no specific prevention for hyperthyroidism, but regular thyroid function tests can help detect and manage the condition early."
+        ],
+        "medication": [
+            "Treatment for hyperthyroidism may include medications to block the production of thyroid hormone (such as methimazole or propylthiouracil), radioactive iodine therapy, or surgery to remove part or all of the thyroid gland."
+        ]
+    },
+    "Hypoglycemia": {
+        "overview": "Hypoglycemia, also known as low blood sugar, occurs when blood glucose levels drop below normal levels. It can result in symptoms such as shakiness, sweating, hunger, irritability, dizziness, confusion, and in severe cases, loss of consciousness or seizures. Hypoglycemia is most commonly associated with diabetes but can also occur in people without diabetes, particularly after prolonged fasting or excessive alcohol consumption.",
+        "prevention": [
+            "Monitoring blood glucose levels regularly, especially in people with diabetes",
+            "Eating regular meals and snacks to maintain stable blood sugar levels",
+            "Avoiding excessive alcohol consumption and prolonged fasting",
+            "Adjusting insulin or diabetes medications as needed to prevent hypoglycemia"
+        ],
+        "medication": [
+            "Treatment for hypoglycemia may include consuming fast-acting carbohydrates (such as glucose tablets or juice) to raise blood sugar levels quickly. In severe cases, glucagon injections or intravenous glucose may be necessary."
+        ]
+    },
+    "Osteoarthritis": {
+        "overview": "Osteoarthritis is a degenerative joint disease characterized by the breakdown of cartilage in the joints, leading to pain, stiffness, and loss of mobility. It is the most common form of arthritis and typically affects weight-bearing joints such as the knees, hips, and spine. Osteoarthritis is more common with aging and can be exacerbated by factors such as obesity, joint injury, and genetics.",
+        "prevention": [
+            "Maintaining a healthy weight and engaging in regular exercise to strengthen muscles and support joint function",
+            "Avoiding joint injuries and overuse",
+            "Using assistive devices or ergonomic aids to reduce joint strain",
+            "Managing underlying risk factors such as obesity and diabetes"
+        ],
+        "medication": [
+            "Treatment for osteoarthritis may include pain relievers (such as acetaminophen or NSAIDs), corticosteroid injections, physical therapy, and joint replacement surgery in severe cases."
+        ]
+    },
+    "Arthritis": {
+        "overview": "Arthritis is a general term that refers to inflammation of the joints. There are many different types of arthritis, including osteoarthritis, rheumatoid arthritis, and gout. Symptoms may include joint pain, stiffness, swelling, and reduced range of motion. Arthritis can be caused by a variety of factors, including autoimmune disorders, infections, and metabolic abnormalities.",
+        "prevention": [
+            "Maintaining a healthy weight and engaging in regular exercise to support joint health",
+            "Eating a balanced diet rich in fruits, vegetables, and omega-3 fatty acids",
+            "Avoiding smoking and excessive alcohol consumption",
+            "Seeking prompt medical treatment for joint injuries or infections"
+        ],
+        "medication": [
+            "Treatment for arthritis depends on the type and severity of the condition but may include pain relievers, anti-inflammatory medications, disease-modifying antirheumatic drugs (DMARDs), and biologic therapies."
+        ]
+    },
+    "(vertigo) Paroxysmal Positional Vertigo": {
+        "overview": "Paroxysmal positional vertigo (BPPV) is a common inner ear disorder that causes brief episodes of vertigo (spinning sensation) triggered by changes in head position. It is often described as a sudden, intense feeling of spinning or dizziness that can be provoked by turning the head, rolling over in bed, or looking up or down. BPPV is usually benign but can significantly impact daily activities and quality of life.",
+        "prevention": [
+            "There is no specific prevention for BPPV, but avoiding rapid head movements and certain positions that trigger symptoms may help reduce the frequency and severity of vertigo episodes."
+        ],
+        "medication": [
+            "Treatment for BPPV typically involves a series of simple head movements (canalith repositioning maneuvers) to move the displaced inner ear crystals (otoconia) back to their proper position. In some cases, medications such as vestibular suppressants or anti-nausea drugs may be prescribed to manage symptoms."
+        ]
+    },
+    "Acne": {
+        "overview": "Acne is a common skin condition that occurs when hair follicles become clogged with oil and dead skin cells, leading to the formation of pimples, blackheads, and whiteheads. Acne most commonly affects the face, chest, back, and shoulders and can range from mild to severe. It is often associated with hormonal changes during puberty but can occur at any age.",
+        "prevention": [
+            "Practicing good skincare habits, including regular cleansing and moisturizing",
+            "Avoiding excessive scrubbing or picking at the skin",
+            "Using non-comedogenic or oil-free skincare products",
+            "Managing stress and maintaining a healthy diet"
+        ],
+        "medication": [
+            "Treatment for acne may include topical medications (such as benzoyl peroxide, retinoids), oral medications (such as antibiotics or hormonal therapies), and procedures such as chemical peels or laser therapy in severe cases."
+        ]
+    },
+    "Urinary tract infection": {
+        "overview": "A urinary tract infection (UTI) is an infection in any part of the urinary system, including the kidneys, ureters, bladder, and urethra. UTIs are typically caused by bacteria, most commonly Escherichia coli (E. coli), and can cause symptoms such as frequent urination, pain or burning during urination, cloudy or bloody urine, and pelvic pain. UTIs are more common in women than men and can usually be treated with antibiotics.",
+        "prevention": [
+            "Drinking plenty of water to flush bacteria out of the urinary tract",
+            "Urinating frequently and completely to prevent bacteria from multiplying",
+            "Practicing good hygiene, including wiping from front to back after using the toilet",
+            "Avoiding irritating substances such as spermicides or certain feminine hygiene products"
+        ],
+        "medication": [
+            "Antibiotics are the primary treatment for UTIs. The specific antibiotic prescribed will depend on the type of bacteria causing the infection and its susceptibility to antibiotics."
+        ]
+    },
+    "Psoriasis": {
+        "overview": "Psoriasis is a chronic autoimmune skin condition that causes the rapid buildup of skin cells, leading to thick, red, scaly patches on the skin's surface. It is believed to be caused by a combination of genetic and environmental factors and can be triggered by factors such as stress, infections, or certain medications. Psoriasis can affect any part of the body and may be associated with other health conditions such as psoriatic arthritis.",
+        "prevention": [
+            "There is no known way to prevent psoriasis, but certain lifestyle modifications may help reduce flare-ups and manage symptoms.",
+            "Avoiding triggers such as stress, smoking, heavy alcohol consumption, and certain medications",
+            "Following a healthy diet rich in fruits, vegetables, and omega-3 fatty acids",
+            "Managing stress through relaxation techniques and mindfulness practices"
+        ],
+        "medication": [
+            "Treatment for psoriasis may include topical medications (such as corticosteroids, retinoids), phototherapy (light therapy), systemic medications (such as methotrexate or biologic agents), and lifestyle interventions."
+        ]
+    },
+    "Impetigo": {
+        "overview": "Impetigo is a highly contagious bacterial skin infection that commonly affects children and infants. It is caused by staphylococcus (staph) or streptococcus (strep) bacteria and is characterized by red sores or blisters that rupture and ooze fluid, forming a yellowish crust. Impetigo is usually spread through close contact with infected individuals or contact with contaminated objects or surfaces.",
+        "prevention": [
+            "Practicing good hygiene, including frequent handwashing with soap and water",
+            "Keeping skin clean and dry, especially in areas prone to infection",
+            "Avoiding sharing personal items such as towels, clothing, or razors",
+            "Promptly treating cuts, scrapes, or insect bites to prevent infection"
+        ],
+        "medication": [
+            "Treatment for impetigo may include topical or oral antibiotics to kill the bacteria causing the infection. Keeping the affected area clean and dry can also help promote healing."
+        ]
+    },
+    "Hypertension": {
+        "overview": "Hypertension, also known as high blood pressure, is a common condition in which the force of blood against the artery walls is consistently too high. It can lead to serious health complications such as heart disease, stroke, and kidney failure. Hypertension often has no symptoms but can be diagnosed through regular blood pressure screenings.",
+        "prevention": [
+            "Maintaining a healthy weight",
+            "Eating a balanced diet low in sodium and high in fruits and vegetables",
+            "Exercising regularly",
+            "Limiting alcohol consumption",
+            "Avoiding tobacco use"
+        ],
+        "medication": [
+            "Antihypertensive medications (such as diuretics, ACE inhibitors, calcium channel blockers)"
+        ]
+    },
+    "Migraine": {
+        "overview": "Migraine is a neurological disorder characterized by recurrent, severe headaches often accompanied by nausea, vomiting, and sensitivity to light and sound. Migraine attacks can last for hours to days and significantly impair daily functioning. The exact cause of migraines is not fully understood, but genetic and environmental factors may play a role.",
+        "prevention": [
+            "Identifying and avoiding migraine triggers (such as certain foods, stress, lack of sleep)",
+            "Maintaining regular sleep patterns",
+            "Practicing relaxation techniques and stress management",
+            "Taking prescribed preventive medications as directed"
+        ],
+        "medication": [
+            "Pain-relieving medications (such as triptans, NSAIDs)",
+            "Medications to prevent migraines (such as beta-blockers, anticonvulsants)"
+        ]
+    },
+    "Cervical spondylosis": {
+        "overview": "Cervical spondylosis, also known as neck arthritis or cervical osteoarthritis, is a common age-related condition that affects the joints and discs in the cervical spine (neck). It is characterized by degeneration of the spinal discs and the development of bone spurs. Symptoms may include neck pain, stiffness, headaches, and numbness or weakness in the arms.",
+        "prevention": [
+            "Maintaining good posture",
+            "Regular neck exercises to strengthen muscles and improve flexibility",
+            "Using ergonomic furniture and devices",
+            "Avoiding excessive neck strain and repetitive movements"
+        ],
+        "medication": [
+            "Pain relievers (such as NSAIDs)",
+            "Muscle relaxants",
+            "Corticosteroid injections (for severe pain and inflammation)"
+        ]
+    },
+    "Paralysis (brain hemorrhage)": {
+        "overview": "Paralysis resulting from brain hemorrhage occurs when bleeding in the brain damages or destroys brain tissue, leading to loss of function in certain body parts or even complete paralysis. Brain hemorrhage can result from various causes, including traumatic brain injury, aneurysm rupture, or hypertension. Symptoms may include weakness, numbness, difficulty speaking or understanding speech, and loss of coordination.",
+        "prevention": [
+            "Managing and controlling hypertension",
+            "Taking precautions to prevent head injuries",
+            "Avoiding tobacco use and excessive alcohol consumption",
+            "Seeking immediate medical attention for any signs of stroke or brain injury"
+        ],
+        "medication": [
+            "Treatment depends on the underlying cause and severity of the brain hemorrhage. It may include medications to control blood pressure, surgery to repair damaged blood vessels, and rehabilitation therapy to regain lost function."
+        ]
+    },
+    "Jaundice": {
+        "overview": "Jaundice is a medical condition characterized by yellowing of the skin and eyes due to elevated levels of bilirubin in the blood. It can occur as a result of various underlying conditions, including liver disease, hepatitis, bile duct obstruction, or hemolytic disorders. Symptoms may also include dark urine, pale stools, abdominal pain, and fatigue.",
+        "prevention": [
+            "Preventing hepatitis infection through vaccination and practicing safe sex",
+            "Avoiding excessive alcohol consumption",
+            "Maintaining a healthy diet and lifestyle",
+            "Seeking prompt medical treatment for any underlying liver or bile duct conditions"
+        ],
+        "medication": [
+            "Treatment depends on the underlying cause of jaundice. It may include medications to treat liver or bile duct disorders, phototherapy to lower bilirubin levels, and supportive care to manage symptoms."
+        ]
+    },
+    "Malaria": {
+        "overview": "Malaria is a life-threatening mosquito-borne disease caused by Plasmodium parasites. It is transmitted to humans through the bite of infected female Anopheles mosquitoes. Malaria is characterized by symptoms such as fever, chills, sweats, headache, nausea, and vomiting. In severe cases, it can lead to complications such as cerebral malaria, organ failure, and death.",
+        "prevention": [
+            "Using insect repellents and mosquito nets",
+            "Taking antimalarial medications as prescribed",
+            "Wearing protective clothing to prevent mosquito bites",
+            "Eliminating mosquito breeding sites around living areas"
+        ],
+        "medication": [
+            "Antimalarial medications (such as chloroquine, artemisinin-based combination therapies)"
+        ]
+    },
+    "Chicken pox": {
+        "overview": "Chickenpox is a highly contagious viral infection caused by the varicella-zoster virus (VZV). It is characterized by an itchy rash with small, fluid-filled blisters that break open and crust over. Other symptoms may include fever, headache, fatigue, and loss of appetite. Chickenpox can be more severe in adults, pregnant women, newborns, and people with weakened immune systems.",
+        "prevention": [
+            "Getting vaccinated against chickenpox (varicella vaccine)",
+            "Avoiding close contact with infected individuals",
+            "Maintaining good personal hygiene",
+            "Using over-the-counter remedies to relieve itching and discomfort"
+        ],
+        "medication": [
+            "Antiviral medications (such as acyclovir) may be prescribed for severe cases or for people at high risk of complications."
+        ]
+    },
+    "Dengue": {
+        "overview": "Dengue fever is a mosquito-borne viral infection caused by the dengue virus. It is transmitted to humans through the bite of infected Aedes mosquitoes, primarily Aedes aegypti. Dengue fever is characterized by sudden onset of fever, severe headache, joint and muscle pain, skin rash, and mild bleeding manifestations such as nosebleeds and gum bleeding.",
+        "prevention": [
+            "Using insect repellents and mosquito nets",
+            "Eliminating mosquito breeding sites around living areas",
+            "Wearing protective clothing to prevent mosquito bites",
+            "Seeking prompt medical attention for suspected dengue fever symptoms"
+        ],
+        "medication": [
+            "Treatment is primarily supportive and may include hydration, pain relievers, and rest. Severe cases may require hospitalization and intravenous fluids."
+        ]
+    },
+    "Typhoid": {
+        "overview": "Typhoid fever is a bacterial infection caused by the bacterium Salmonella typhi. It is transmitted through contaminated food and water or close contact with infected individuals. Typhoid fever is characterized by sustained fever, headache, abdominal pain, constipation or diarrhea, and sometimes a rose-colored rash. Without treatment, it can lead to serious complications such as intestinal perforation and death.",
+        "prevention": [
+            "Practicing good hygiene, including frequent handwashing",
+            "Avoiding consuming contaminated food and water",
+            "Getting vaccinated against typhoid fever (for travelers to endemic areas)"
+        ],
+        "medication": [
+            "Antibiotics (such as ciprofloxacin, azithromycin) are used to treat typhoid fever and prevent complications. Vaccination is also available for prevention."
+        ]
+    },
+    "Hepatitis A": {
+        "overview": "Hepatitis A is a viral liver disease caused by the hepatitis A virus (HAV). It is transmitted through consumption of contaminated food or water or close contact with an infected person. Hepatitis A infection is usually acute and self-limited, with symptoms such as fever, fatigue, nausea, abdominal pain, jaundice, and dark urine.",
+        "prevention": [
+            "Getting vaccinated against hepatitis A",
+            "Practicing good hygiene, including frequent handwashing",
+            "Avoiding consuming contaminated food and water",
+            "Using condoms during sex (to prevent sexual transmission)"
+        ],
+        "medication": [
+            "There is no specific treatment for hepatitis A. Supportive care may include rest, adequate nutrition, and avoiding alcohol and certain medications that can further damage the liver."
+        ]
+    },
+    "Hepatitis B": {
+        "overview": "Hepatitis B is a viral liver infection caused by the hepatitis B virus (HBV). It is transmitted through contact with infected blood, semen, or other bodily fluids. Hepatitis B infection can be acute or chronic, with symptoms ranging from mild flu-like symptoms to severe liver damage and cirrhosis. Chronic hepatitis B can lead to complications such as liver failure and liver cancer.",
+        "prevention": [
+            "Getting vaccinated against hepatitis B",
+            "Using condoms during sex and avoiding sharing needles or syringes",
+            "Ensuring safe blood transfusions and medical procedures",
+            "Screening pregnant women for hepatitis B and providing antiviral medications to prevent mother-to-child transmission"
+        ],
+        "medication": [
+            "Antiviral medications (such as tenofovir, entecavir) are used to treat chronic hepatitis B and reduce the risk of complications. Vaccination is also available for prevention."
+        ]
+    },
+    "Fungal infection": {
+        "overview": "Fungal infection refers to an infection caused by a fungus. It can affect various parts of the body, including the skin, nails, hair, and internal organs. Symptoms depend on the type and location of the infection but may include itching, redness, swelling, rashes, and in severe cases, fever and organ dysfunction.",
+        "prevention": [
+            "Maintaining good personal hygiene",
+            "Avoiding sharing personal items such as towels and clothing",
+            "Keeping skin dry and clean"
+        ],
+        "medication": [
+            "Antifungal medications (topical or oral)"
+        ]
+    },
+    "Allergy": {
+        "overview": "Allergy is an immune system response to a foreign substance that is typically harmless to most people. Common allergens include pollen, dust mites, pet dander, certain foods, and insect stings. Symptoms can range from mild to severe and may include sneezing, runny or stuffy nose, itchy or watery eyes, skin rash, hives, and in severe cases, anaphylaxis.",
+        "prevention": [
+            "Avoiding known allergens",
+            "Using air purifiers and allergy-proof bedding",
+            "Taking prescribed allergy medications as directed"
+        ],
+        "medication": [
+            "Antihistamines",
+            "Decongestants",
+            "Epinephrine (for severe allergic reactions)"
+        ]
+    },
+    "GERD": {
+        "overview": "Gastroesophageal reflux disease (GERD) is a chronic digestive disorder characterized by acid reflux and heartburn. It occurs when stomach acid flows back into the esophagus, causing irritation and inflammation. Symptoms include heartburn, regurgitation of stomach acid or food, difficulty swallowing, and chest pain.",
+        "prevention": [
+            "Maintaining a healthy weight",
+            "Avoiding trigger foods such as spicy or fatty foods, caffeine, and alcohol",
+            "Eating smaller, more frequent meals"
+        ],
+        "medication": [
+            "Proton pump inhibitors (omeprazole, lansoprazole)",
+            "H2-receptor blockers (ranitidine, famotidine)"
+        ]
+    },
+    "Chronic cholestasis": {
+        "overview": "Chronic cholestasis is a condition characterized by the impaired flow of bile from the liver, leading to the accumulation of bile acids and other substances in the liver and bloodstream. It can result from various liver diseases, bile duct obstruction, or genetic disorders. Symptoms may include jaundice, itching, dark urine, and pale stools.",
+        "prevention": [
+            "Treatment of underlying liver conditions",
+            "Avoiding alcohol and certain medications that can worsen liver function",
+            "Regular monitoring and management of symptoms"
+        ],
+        "medication": [
+            "Ursodeoxycholic acid (ursodiol)",
+            "Cholestyramine"
+        ]
+    },
+    "Drug Reaction": {
+        "overview": "Drug reaction, also known as adverse drug reaction (ADR), refers to an unintended and harmful response to medication. It can occur due to various factors, including individual sensitivity, drug interactions, and dosage errors. Symptoms may range from mild skin rashes to life-threatening allergic reactions.",
+        "prevention": [
+            "Carefully reading medication labels and instructions",
+            "Informing healthcare providers of any known drug allergies or sensitivities",
+            "Avoiding self-medication and consulting healthcare providers before starting any new medication"
+        ],
+        "medication": [
+            "Treatment depends on the type and severity of the drug reaction. It may include discontinuation of the offending medication, supportive care, and in severe cases, administration of antidotes."
+        ]
+    },
+    "Peptic ulcer disease": {
+        "overview": "Peptic ulcer disease (PUD) is a condition characterized by open sores, known as ulcers, in the lining of the stomach, small intestine, or esophagus. It is often caused by infection with Helicobacter pylori bacteria, long-term use of nonsteroidal anti-inflammatory drugs (NSAIDs), or excessive alcohol consumption. Symptoms may include abdominal pain, bloating, indigestion, nausea, and vomiting.",
+        "prevention": [
+            "Avoiding smoking",
+            "Limiting alcohol consumption",
+            "Using NSAIDs cautiously and under medical supervision"
+        ],
+        "medication": [
+            "Proton pump inhibitors (omeprazole, esomeprazole)",
+            "Antibiotics (for H. pylori eradication)"
+        ]
+    },
+    "AIDS": {
+        "overview": "Acquired immunodeficiency syndrome (AIDS) is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). It weakens the immune system, making individuals more susceptible to infections and certain cancers. Symptoms may include fever, fatigue, weight loss, recurrent infections, and swollen lymph nodes.",
+        "prevention": [
+            "Practicing safe sex and using condoms consistently",
+            "Avoiding sharing needles or syringes",
+            "Getting tested for HIV and seeking early treatment if infected"
+        ],
+        "medication": [
+            "Antiretroviral therapy (ART) to suppress HIV replication and improve immune function"
+        ]
+    },
+    "Diabetes": {
+        "overview": "Diabetes is a chronic metabolic disorder characterized by high blood sugar levels due to insufficient insulin production or ineffective use of insulin by the body. There are several types of diabetes, including type 1, type 2, and gestational diabetes. Symptoms may include frequent urination, increased thirst, unexplained weight loss, fatigue, and blurred vision.",
+        "prevention": [
+            "Maintaining a healthy weight",
+            "Eating a balanced diet low in sugar and refined carbohydrates",
+            "Engaging in regular physical activity"
+        ],
+        "medication": [
+            "Insulin therapy (for type 1 diabetes)",
+            "Oral medications (for type 2 diabetes)",
+            "Lifestyle modifications such as diet and exercise"
+        ]
+    },
+    "Gastroenteritis": {
+        "overview": "Gastroenteritis, commonly known as stomach flu, is inflammation of the stomach and intestines typically caused by viral or bacterial infections. It is characterized by symptoms such as diarrhea, vomiting, abdominal pain, cramps, nausea, and fever.",
+        "prevention": [
+            "Practicing good hygiene, including frequent handwashing",
+            "Avoiding contaminated food and water",
+            "Getting vaccinated against rotavirus (for children)"
+        ],
+        "medication": [
+            "Treatment is primarily supportive and may include rehydration with oral or intravenous fluids, antiemetic medications to control vomiting, and antidiarrheal medications."
+        ]
+    },
+    "Bronchial Asthma": {
+        "overview": "Bronchial asthma, often called asthma, is like having a tiny airbag inside your lungs that misbehaves. It's a bit like a sensitive smoke alarm that goes off even when there's just a hint of smoke. People with asthma often experience episodes where their airways get really narrow, making it tough to breathe properly. These episodes can be triggered by things like dust, pollen, smoke, or even stress.",
+        "prevention": [
+            "To keep the airbag in your lungs calm, it's good to avoid things that set it off. That might mean staying away from dusty places, not hanging out with pets that make your nose tickle, and avoiding places where people smoke.",
+            "Taking medicine regularly can also help keep the airbag from getting too excited. Doctors might give you special puffers or pills to help your lungs chill out and breathe easy.",
+            "Eating well and exercising can also make a big difference. It's like giving your lungs a superhero cape to fight off the bad stuff."
+        ],
+        "medication": [
+            "When your airbag starts acting up, doctors have special potions to help calm it down. These can come in fancy puffers or even pills. They work by opening up your airways so you can breathe better and by taming the inflammation in your lungs to stop those pesky episodes from happening."
+        ]
     }
-
-    
+}
