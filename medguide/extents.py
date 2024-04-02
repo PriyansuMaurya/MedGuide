@@ -1,17 +1,23 @@
 from flask import Blueprint,render_template, request
 import json
-
+import os
 extents = Blueprint('extents',__name__)
 
+# Get the current directory of the Python file
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the absolute path to suggestion.json
+JSON_FILE_PATH = os.path.join(current_directory, "templates", "suggestion.json")
 
 
 @extents.route("/suggestions", methods=['GET', 'POST'])
 def suggestions():
         # Open the JSON file
-        with open('/workspaces/MedGuide/medguide/templates/suggestion.json', 'r') as file:
+        # with open('/workspaces/MedGuide/medguide/templates/suggestion.json', 'r') as file:
+        with open(JSON_FILE_PATH, 'r') as file:   
         # Load JSON data into a Python dictionary
-                disease_data = json.load(file)
-        # clicked_button_name
+                disease_data = json.load(file)         
+        # clicked_button_name                      
         if request.method == 'POST':
                 disease = request.form.get('clicked_button_name')[2:-2]
                 def get_recommendations(my_disease):
