@@ -25,12 +25,12 @@
 
     {% for disease in possible_disease %}
     <div class="mt-[31px] rounded-r-[46px] w-fit ml-[33px] border-[#BDC1C6] border-[1px] bg-[#141516]">
-      <form action="/suggestions" method="POST"> 
-        <button type="submit" class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]">
-          <p class="text-[#C4C7C5] text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">{{ disease[0] }}</p>
+      <form action="/suggestions" method="POST">   
+        <button type="submit" class="w-[146px] h-[54px]  rounded-r-[28px] border-[1px] border-[#FFF] bg-[#BAC]">
+          <p class="text-black m-auto text-center p-[5px] font-['Inter'] text-[18px] font-normal leading-normal">{{ disease[0] }}</p>
         </button>
         
-        <input type="hidden" name="clicked_button_name" value="{{disease}}">
+        <input type="hidden" name="clicked_button_name" value="{{disease}}">   
       </form>
     </div>
     {% endfor %}
@@ -41,11 +41,12 @@
 </div>
 
 <div class="flex items-center justify-center mt-[30px]">
-  <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]" id="backBtn">
-    <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Back</p>
+  <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]">
+    <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">
+      <a href="{{ referrer }}">Back</a></p>
   </Button>
-  <Button class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]" id="nextBtn">
+  <!-- <Button class="w-[146px] h-[54px] ml-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#BAC]" id="nextBtn">
     <p class="font-['Inter'] text-[20px] font-medium leading-normal">Next</p>
-  </Button>
+  </Button> -->
 </div>
 {% endblock %}

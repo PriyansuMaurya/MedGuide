@@ -16,16 +16,16 @@
   </div>
 </div>
 
-<form action="/" method="POST" onsubmit="return validateForm()">
+<form action="/possible-diseases" method="POST" onsubmit="return validateForm()">
   <div class="flex items-center justify-center mt-[24px] relative">
-    <input id="selectedSymptoms" class="selected-symptoms-container pl-[24px]" placeholder="    Please Select Symptoms" name="selectedSymptoms" ></input>
+    <input id="selectedSymptoms" class="selected-symptoms-container ml-16 pl-[24px]" placeholder="    Please Select Symptoms" name="selectedSymptoms" ></input>
     <div class="w-[1094px] h-[380px] rounded-[28px] border-[#000] bg-[#222327]">
       <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">Symptom details</p>
       <div class="ml-[40px] mt-[47px]">
         <div class="inline-flex items-start">
           <div>
             <p class="text-[#C4C7C5] ml-[6px] font-['Inter'] text-[20px] font-normal leading-normal">Age of the patient *</p>
-            <select id="ageSelect" name="age" class="w-[213px] h-[41px]  pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+            <select id="ageSelect" name="age" class="w-[213px] h-[41px]  pl-[24px] text-[#C4C7C5] rounded-xl cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
               <option value="Please Select" selected>Please Select</option>
               <option value="under 18">under 18</option>
               <option value="18 -50">18 - 50</option>
@@ -34,7 +34,7 @@
           </div>  
           <div>
             <p class="text-[#C4C7C5] ml-[85px] font-['Inter'] text-[20px] font-normal leading-normal">Select your Gender *</p>
-            <select id="sexSelect" name="sex" class="w-[213px] h-[41px] ml-[78px] pl-[24px] text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
+            <select id="sexSelect" name="sex" class="w-[213px] h-[41px] ml-[78px] pl-[24px] text-[#C4C7C5] rounded-xl cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6;">
               <option value="Please Select" selected>Please Select</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -42,7 +42,7 @@
           </div>
           <div>
             <p class="text-[#C4C7C5] ml-[90px] font-['Inter'] text-[20px] font-normal leading-normal">Enter abnormal clinical features</p>
-            <select class="w-[364px] h-[20px] overflow-y-scroll mt-12 ml-[84px] pt-[11px]  pl-[24px]  text-[#C4C7C5] rounded-[48px] cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6; height: auto" id="symptomInput" autocomplete="off" name="symptom" multiple>
+            <select class="w-[400px] h-[20px] overflow-y-scroll mt-12 ml-[82px]  pt-[11px]  pl-[24px]  text-[#C4C7C5] rounded-xl cursor-pointer border-[1px] bg-[#131314E6]" style="border: 1px solid #BDC1C6; background-color: #131314E6; height: auto" id="symptomInput" autocomplete="off" name="symptom" multiple>
               {% for symptom in symptoms_list %}
               <option value="{{symptom}}">{{symptom}}</option>
               {% endfor %}
@@ -72,9 +72,9 @@
     top: 8.2rem;
     left: 48.5rem;  
     width: 400px;
-    height: 41px;  
+    height: 41px;    
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 12px;
     background-color: #131314E6;
     color: white;
     z-index: 1;  
