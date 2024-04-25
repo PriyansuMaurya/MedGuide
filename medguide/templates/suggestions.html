@@ -20,12 +20,12 @@
 <div class="flex items-center justify-center mt-[24px]">
   <div class="w-max-content h-auto rounded-[28px] bg-[#222327]">
     <p class="mt-[20px] ml-[30px] text-[#BAC] font-['Inter' text-[24px] font-semibold leading-normal]">
-      {{disease_name}}</p>
+      {{disease_name}}</p>   
 
     <div class="inline-flex items-center justify-center">   
       <section
         class="container mx-auto  p-10 md:p-20 xl:flex grid lg:grid-cols-2 2xl:grid-cols-3 grid-cols-1 items-start justify-between gap-x-10 gap-y-10 transform duration-500">
-        <article   
+        <div   
           class="shadow-md mx-auto max-w-sm  transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
           <div class="max-h-140 overflow-hidden">
             <img class="w-full h-auto"
@@ -38,8 +38,8 @@
               {{prescription['overview']}}
             </p>
           </div>
-        </article>
-        <article
+        </div>
+        <div
           class="shadow-md mx-auto max-w-sm transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer">
           <div class="max-h-140 overflow-hidden">
             <img class="w-full h-auto"
@@ -48,16 +48,16 @@
           </div>
           <div class="p-7 my-auto pb-12 border-[1px] border-[#FFF] rounded-2xl">
             <h1 class="text-2xl font-semibold text-slate-200">Preventions</h1>
-            <p class="mt-5">
-            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-[155px] pl-2 list-disc">
+            <p class="mt-5">   
+            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-full pl-2 list-disc">
               {% for prevention_items in prescription['prevention'] %}
               <li>{{prevention_items}}</li>
               {% endfor %}
             </ul>
             </p>
           </div>
-        </article>
-        <article
+        </div>
+        <div
           class="shadow-md mx-auto max-w-sm transform hover:-translate-y-1 duration-300 hover:shadow-xl cursor-pointer ">
           <div class="max-h-140 overflow-hidden">
             <img class="w-full h-auto"
@@ -69,22 +69,22 @@
               Medications
             </h1>
             <p class="mt-5">
-            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-[155px] pl-2 list-disc">
+            <ul class="text-xl font-light leading-relaxed text-gray-400 w-[259px] h-full pl-2 list-disc">
               {% for medication_items in prescription['medication'] %}
               <li>{{medication_items}}</li>
               {% endfor %}
             </ul>
             </p>
           </div>
-        </article>
+        </div>
       </section>
     </div>
   </div>
 </div>
 
 <div class="flex items-center justify-center mt-[30px]">
-  <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]" id="backBtn">
-    <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal">Back</p>
+  <Button class="w-[146px] h-[54px] rounded-[28px] border-[1px] border-[#FFF] bg-[#17191C]">
+    <p class="text-[#FFF] font-['Inter'] text-[20px] font-medium leading-normal"><a href="{{ referrer }}">Back</a></p>
   </Button>
 </div>
 {% endblock %}

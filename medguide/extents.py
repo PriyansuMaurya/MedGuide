@@ -12,6 +12,7 @@ JSON_FILE_PATH = os.path.join(current_directory, "templates", "suggestion.json")
 
 @extents.route("/suggestions", methods=['GET', 'POST'])
 def suggestions():
+        referrer = request.referrer
         # Open the JSON file
         # with open('/workspaces/MedGuide/medguide/templates/suggestion.json', 'r') as file:
         with open(JSON_FILE_PATH, 'r') as file:   
@@ -37,7 +38,7 @@ def suggestions():
 
                         return recommendations
                                 
-                return render_template('suggestions.html', title="Suggestions", prescription = get_recommendations(disease), disease_name=disease)
+                return render_template('suggestions.html', title="Suggestions", prescription = get_recommendations(disease), disease_name=disease, referrer=referrer)
                 
 @extents.route("/faqs", methods=['GET', 'POST'])
 def faqs(): 
